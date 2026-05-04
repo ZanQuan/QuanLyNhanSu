@@ -292,6 +292,7 @@
             this.Controls.Add(this.grpbox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDMPhongBan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Mục Phòng Ban";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

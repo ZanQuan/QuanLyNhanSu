@@ -253,6 +253,7 @@
             this.Controls.Add(this.grpbox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLoaiHD";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loại Hợp Đồng";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

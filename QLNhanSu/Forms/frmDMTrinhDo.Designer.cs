@@ -251,6 +251,7 @@
             this.Controls.Add(this.grpbox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDMTrinhDo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Mục Trình Độ";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DMTD)).EndInit();
             this.panel1.ResumeLayout(false);

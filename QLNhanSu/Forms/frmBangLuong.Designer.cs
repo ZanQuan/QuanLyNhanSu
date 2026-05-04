@@ -1019,6 +1019,7 @@
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBangLuong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bảng Chấm Công & Bảng Lương";
             this.grpchamcong.ResumeLayout(false);
             this.grpchamcong.PerformLayout();

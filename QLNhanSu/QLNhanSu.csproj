@@ -156,6 +156,12 @@
     <Compile Include="Forms\frmPhanQuyen.Designer.cs">
       <DependentUpon>frmPhanQuyen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmBangLuong.resx">
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPhanQuyen.resx">
       <DependentUpon>frmPhanQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

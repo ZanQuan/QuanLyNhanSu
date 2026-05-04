@@ -144,6 +144,7 @@
             this.Controls.Add(this.tabbcchung);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmChonBCNV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Báo cáo nhân sự";
             this.tabbcchung.ResumeLayout(false);
             this.tabbcluong.ResumeLayout(false);

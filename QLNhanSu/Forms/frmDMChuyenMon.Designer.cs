@@ -262,6 +262,7 @@
             this.Controls.Add(this.grpbox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDMChuyenMon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Mục Chuyên Môn";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

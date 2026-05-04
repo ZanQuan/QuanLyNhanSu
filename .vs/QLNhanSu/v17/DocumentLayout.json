@@ -3,11 +3,23 @@
   "WorkspaceRootPath": "E:\\QUANLYNHANSU\\QLNhanSu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DB40CCE7-1515-4202-9F85-602B86A3AE2A}|QLNhanSu\\QLNhanSu.csproj|e:\\quanlynhansu\\qlnhansu\\qlnhansu\\forms\\frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DB40CCE7-1515-4202-9F85-602B86A3AE2A}|QLNhanSu\\QLNhanSu.csproj|solutionrelative:qlnhansu\\forms\\frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{DB40CCE7-1515-4202-9F85-602B86A3AE2A}|QLNhanSu\\QLNhanSu.csproj|e:\\quanlynhansu\\qlnhansu\\qlnhansu\\forms\\frmdmdantoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DB40CCE7-1515-4202-9F85-602B86A3AE2A}|QLNhanSu\\QLNhanSu.csproj|solutionrelative:qlnhansu\\forms\\frmdmdantoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB40CCE7-1515-4202-9F85-602B86A3AE2A}|QLNhanSu\\QLNhanSu.csproj|e:\\quanlynhansu\\qlnhansu\\qlnhansu\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DB40CCE7-1515-4202-9F85-602B86A3AE2A}|QLNhanSu\\QLNhanSu.csproj|e:\\quanlynhansu\\qlnhansu\\qlnhansu\\forms\\frmuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB40CCE7-1515-4202-9F85-602B86A3AE2A}|QLNhanSu\\QLNhanSu.csproj|solutionrelative:qlnhansu\\forms\\frmuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB40CCE7-1515-4202-9F85-602B86A3AE2A}|QLNhanSu\\QLNhanSu.csproj|e:\\quanlynhansu\\qlnhansu\\qlnhansu\\forms\\frmuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DB40CCE7-1515-4202-9F85-602B86A3AE2A}|QLNhanSu\\QLNhanSu.csproj|solutionrelative:qlnhansu\\forms\\frmuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB40CCE7-1515-4202-9F85-602B86A3AE2A}|QLNhanSu\\QLNhanSu.csproj|e:\\quanlynhansu\\qlnhansu\\qlnhansu\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB40CCE7-1515-4202-9F85-602B86A3AE2A}|QLNhanSu\\QLNhanSu.csproj|solutionrelative:qlnhansu\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB40CCE7-1515-4202-9F85-602B86A3AE2A}|QLNhanSu\\QLNhanSu.csproj|E:\\QUANLYNHANSU\\QLNhanSu\\qlnhansu\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DB40CCE7-1515-4202-9F85-602B86A3AE2A}|QLNhanSu\\QLNhanSu.csproj|solutionrelative:qlnhansu\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -31,25 +43,63 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmDangNhap.cs [Design]",
-              "DocumentMoniker": "E:\\QUANLYNHANSU\\QLNhanSu\\QLNhanSu\\Forms\\frmDangNhap.cs",
-              "RelativeDocumentMoniker": "QLNhanSu\\Forms\\frmDangNhap.cs",
-              "ToolTip": "E:\\QUANLYNHANSU\\QLNhanSu\\QLNhanSu\\Forms\\frmDangNhap.cs [Design]",
-              "RelativeToolTip": "QLNhanSu\\Forms\\frmDangNhap.cs [Design]",
+              "Title": "frmDMDanToc.cs [Design]",
+              "DocumentMoniker": "E:\\QUANLYNHANSU\\QLNhanSu\\QLNhanSu\\Forms\\frmDMDanToc.cs",
+              "RelativeDocumentMoniker": "QLNhanSu\\Forms\\frmDMDanToc.cs",
+              "ToolTip": "E:\\QUANLYNHANSU\\QLNhanSu\\QLNhanSu\\Forms\\frmDMDanToc.cs [Design]",
+              "RelativeToolTip": "QLNhanSu\\Forms\\frmDMDanToc.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T10:07:19.333Z",
+              "WhenOpened": "2026-05-04T11:40:10.223Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "frmUser.cs",
+              "DocumentMoniker": "E:\\QUANLYNHANSU\\QLNhanSu\\QLNhanSu\\Forms\\frmUser.cs",
+              "RelativeDocumentMoniker": "QLNhanSu\\Forms\\frmUser.cs",
+              "ToolTip": "E:\\QUANLYNHANSU\\QLNhanSu\\QLNhanSu\\Forms\\frmUser.cs",
+              "RelativeToolTip": "QLNhanSu\\Forms\\frmUser.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAAApwJsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T11:28:12.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmUser.cs [Design]",
+              "DocumentMoniker": "E:\\QUANLYNHANSU\\QLNhanSu\\QLNhanSu\\Forms\\frmUser.cs",
+              "RelativeDocumentMoniker": "QLNhanSu\\Forms\\frmUser.cs",
+              "ToolTip": "E:\\QUANLYNHANSU\\QLNhanSu\\QLNhanSu\\Forms\\frmUser.cs [Design]",
+              "RelativeToolTip": "QLNhanSu\\Forms\\frmUser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T11:28:01.527Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "E:\\QUANLYNHANSU\\QLNhanSu\\QLNhanSu\\Forms\\frmMain.cs",
+              "RelativeDocumentMoniker": "QLNhanSu\\Forms\\frmMain.cs",
+              "ToolTip": "E:\\QUANLYNHANSU\\QLNhanSu\\QLNhanSu\\Forms\\frmMain.cs",
+              "RelativeToolTip": "QLNhanSu\\Forms\\frmMain.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAhwDIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T11:18:20.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "frmMain.cs [Design]",
               "DocumentMoniker": "E:\\QUANLYNHANSU\\QLNhanSu\\QLNhanSu\\Forms\\frmMain.cs",
               "RelativeDocumentMoniker": "QLNhanSu\\Forms\\frmMain.cs",
               "ToolTip": "E:\\QUANLYNHANSU\\QLNhanSu\\QLNhanSu\\Forms\\frmMain.cs [Design]",
               "RelativeToolTip": "QLNhanSu\\Forms\\frmMain.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T10:05:51.827Z",
+              "WhenOpened": "2026-05-04T11:18:13.488Z",
               "EditorCaption": " [Design]"
             }
           ]

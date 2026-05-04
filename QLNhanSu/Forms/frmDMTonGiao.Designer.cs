@@ -253,6 +253,7 @@
             this.Controls.Add(this.grpbox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDMTonGiao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Mục Tôn Giáo";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DMTG)).EndInit();
             this.panel1.ResumeLayout(false);

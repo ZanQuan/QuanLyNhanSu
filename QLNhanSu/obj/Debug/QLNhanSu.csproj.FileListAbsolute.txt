@@ -26,3 +26,4 @@ E:\QUANLYNHANSU\QLNhanSu\QLNhanSu\obj\Debug\QLNhanSu.csproj.CoreCompileInputs.ca
 E:\QUANLYNHANSU\QLNhanSu\QLNhanSu\obj\Debug\QLNhanSu.exe
 E:\QUANLYNHANSU\QLNhanSu\QLNhanSu\obj\Debug\QLNhanSu.pdb
 E:\QUANLYNHANSU\QLNhanSu\QLNhanSu\obj\Debug\QLNhanSu.exe.config
+E:\QUANLYNHANSU\QLNhanSu\QLNhanSu\obj\Debug\QLNhanSu.Forms.frmUser.resources

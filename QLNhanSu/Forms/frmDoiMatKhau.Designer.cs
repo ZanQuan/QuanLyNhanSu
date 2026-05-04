@@ -151,6 +151,7 @@
             this.Controls.Add(this.txtmkcu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDoiMatKhau";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thay đổi mật khẩu đăng nhập";
             this.ResumeLayout(false);
             this.PerformLayout();

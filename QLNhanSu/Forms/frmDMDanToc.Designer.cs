@@ -59,16 +59,16 @@
             this.panel1.Controls.Add(this.txtmadantoc);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.dgv_DMDanToc);
-            this.panel1.Location = new System.Drawing.Point(13, 13);
+            this.panel1.Location = new System.Drawing.Point(25, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(316, 237);
+            this.panel1.Size = new System.Drawing.Size(328, 237);
             this.panel1.TabIndex = 13;
             // 
             // txttendantoc
             // 
             this.txttendantoc.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txttendantoc.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttendantoc.Location = new System.Drawing.Point(94, 48);
+            this.txttendantoc.Location = new System.Drawing.Point(120, 49);
             this.txttendantoc.MaxLength = 50;
             this.txttendantoc.Name = "txttendantoc";
             this.txttendantoc.ReadOnly = true;
@@ -80,7 +80,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 52);
+            this.label2.Location = new System.Drawing.Point(3, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 19);
             this.label2.TabIndex = 14;
@@ -90,11 +90,11 @@
             // 
             this.txtmadantoc.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtmadantoc.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmadantoc.Location = new System.Drawing.Point(94, 17);
+            this.txtmadantoc.Location = new System.Drawing.Point(120, 14);
             this.txtmadantoc.MaxLength = 8;
             this.txtmadantoc.Name = "txtmadantoc";
             this.txtmadantoc.ReadOnly = true;
-            this.txtmadantoc.Size = new System.Drawing.Size(108, 26);
+            this.txtmadantoc.Size = new System.Drawing.Size(121, 26);
             this.txtmadantoc.TabIndex = 11;
             this.txtmadantoc.Tag = "";
             // 
@@ -102,7 +102,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 21);
+            this.label3.Location = new System.Drawing.Point(3, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 19);
             this.label3.TabIndex = 12;
@@ -117,7 +117,7 @@
             this.MaDT,
             this.TenDT});
             this.dgv_DMDanToc.GridColor = System.Drawing.SystemColors.ControlText;
-            this.dgv_DMDanToc.Location = new System.Drawing.Point(3, 93);
+            this.dgv_DMDanToc.Location = new System.Drawing.Point(9, 93);
             this.dgv_DMDanToc.Name = "dgv_DMDanToc";
             this.dgv_DMDanToc.ReadOnly = true;
             this.dgv_DMDanToc.RowHeadersWidth = 51;
@@ -165,7 +165,7 @@
             this.grpbox.Controls.Add(this.cmdthem);
             this.grpbox.Controls.Add(this.cmdCapnhat);
             this.grpbox.Controls.Add(this.cmdxoa);
-            this.grpbox.Location = new System.Drawing.Point(335, 11);
+            this.grpbox.Location = new System.Drawing.Point(359, 13);
             this.grpbox.Name = "grpbox";
             this.grpbox.Size = new System.Drawing.Size(87, 237);
             this.grpbox.TabIndex = 14;
@@ -241,11 +241,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(434, 261);
+            this.ClientSize = new System.Drawing.Size(458, 261);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grpbox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDMDanToc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Mục Dân Tộc";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

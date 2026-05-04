@@ -435,6 +435,7 @@
             this.Controls.Add(this.pnlthongtin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBangTiLeLuong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bảng Tỉ Lệ Lương Tháng";
             this.grpbox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TiLeLuong)).EndInit();

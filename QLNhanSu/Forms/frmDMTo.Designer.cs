@@ -290,6 +290,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDMTo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Mục Tổ";
             this.grpbox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DMTO)).EndInit();
