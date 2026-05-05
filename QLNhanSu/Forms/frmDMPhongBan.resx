@@ -127,7 +127,7 @@
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cmdthem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnThem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABQElEQVQ4T6VSSW6DQBD0V/KaOfmSh+SS
@@ -139,7 +139,7 @@
         X91NdqIAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="cmdxoa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnXoa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABQklEQVQ4T6WSy2rCYBCFfbWuSilScNmn
@@ -151,10 +151,10 @@
         XB4Z2+a81AAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="cmdluu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnLuu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAP3AAADCgErs3NLAAABEElE
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAP2AAADCgHg76DuAAABEElE
         QVQ4T6WSLQ6EQAyF91QoHB6FxCBxSCQejeAACAQGh8Mi0ZyAA6C7+Zq0m/0hkKx4DNP0ffM68Oj7/vGP
         9NE0jVRVJUVRSJ7nchyHats2medZhmGQaZpU9KI3QF3XUpalmrMsk33f1bwsizZT67pOYezpR1+ANE1V
         dvI4jmqgBgCgmUnsAMzET5JERVTMrBipMca6rmo0vQGIH8exymbmRN4BAGRPr8kBdnmWgIht2+rpADAj
@@ -162,10 +162,10 @@
         RC8eBwRBoES+PRGvVuKHYfgCsLE/8I7o5VAH/KMnjwGaQG36YnMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="cmdthoat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnThoat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAP3AAADCgErs3NLAAABZklE
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAP2AAADCgHg76DuAAABZklE
         QVQ4T6WSQUvDQBCF80P9DSpeFQniQS2KYIRASptGq6REIWmMCRZNq4dURdOj3hQRLAj+g5E3OmuaIKIe
         PibZzHvzsrua1Yy1/1BZ+Im5JZNqmx5Zdky/NoDY2j2iBb1RMsDL58J3zCxuk9kIyPf7FIQXpK87tGX6
         pNWMgLxuNsFOZ/ARs2CA5tn5JhvgWz66YxPtJM3p4XGseBm/MfFpXjHGMCSB0HYTRkMjhE/Pr0osIAma
@@ -175,7 +175,7 @@
         beQtVAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="cmdcapnhat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnSua.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABLklEQVQ4T6WSvU6EUBCF9yl8JWPMNrZ2

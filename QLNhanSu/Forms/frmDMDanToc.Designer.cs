@@ -40,11 +40,11 @@
             this.MaDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpbox = new System.Windows.Forms.GroupBox();
-            this.cmdluu = new System.Windows.Forms.Button();
-            this.cmdthoat = new System.Windows.Forms.Button();
-            this.cmdthem = new System.Windows.Forms.Button();
-            this.cmdCapnhat = new System.Windows.Forms.Button();
-            this.cmdxoa = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DMDanToc)).BeginInit();
             this.grpbox.SuspendLayout();
@@ -59,9 +59,9 @@
             this.panel1.Controls.Add(this.txtmadantoc);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.dgv_DMDanToc);
-            this.panel1.Location = new System.Drawing.Point(25, 13);
+            this.panel1.Location = new System.Drawing.Point(17, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(328, 237);
+            this.panel1.Size = new System.Drawing.Size(405, 310);
             this.panel1.TabIndex = 13;
             // 
             // txttendantoc
@@ -117,14 +117,15 @@
             this.MaDT,
             this.TenDT});
             this.dgv_DMDanToc.GridColor = System.Drawing.SystemColors.ControlText;
-            this.dgv_DMDanToc.Location = new System.Drawing.Point(9, 93);
+            this.dgv_DMDanToc.Location = new System.Drawing.Point(7, 81);
             this.dgv_DMDanToc.Name = "dgv_DMDanToc";
             this.dgv_DMDanToc.ReadOnly = true;
             this.dgv_DMDanToc.RowHeadersWidth = 51;
             this.dgv_DMDanToc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgv_DMDanToc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_DMDanToc.Size = new System.Drawing.Size(310, 130);
+            this.dgv_DMDanToc.Size = new System.Drawing.Size(381, 215);
             this.dgv_DMDanToc.TabIndex = 9;
+            this.dgv_DMDanToc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DMDanToc_CellClick);
             // 
             // MaDT
             // 
@@ -160,94 +161,100 @@
             // 
             // grpbox
             // 
-            this.grpbox.Controls.Add(this.cmdluu);
-            this.grpbox.Controls.Add(this.cmdthoat);
-            this.grpbox.Controls.Add(this.cmdthem);
-            this.grpbox.Controls.Add(this.cmdCapnhat);
-            this.grpbox.Controls.Add(this.cmdxoa);
-            this.grpbox.Location = new System.Drawing.Point(359, 13);
+            this.grpbox.Controls.Add(this.btnLuu);
+            this.grpbox.Controls.Add(this.btnThoat);
+            this.grpbox.Controls.Add(this.btnThem);
+            this.grpbox.Controls.Add(this.btnSua);
+            this.grpbox.Controls.Add(this.btnXoa);
+            this.grpbox.Location = new System.Drawing.Point(439, 12);
             this.grpbox.Name = "grpbox";
-            this.grpbox.Size = new System.Drawing.Size(87, 237);
+            this.grpbox.Size = new System.Drawing.Size(113, 310);
             this.grpbox.TabIndex = 14;
             this.grpbox.TabStop = false;
             // 
-            // cmdluu
+            // btnLuu
             // 
-            this.cmdluu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmdluu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdluu.Image = ((System.Drawing.Image)(resources.GetObject("cmdluu.Image")));
-            this.cmdluu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdluu.Location = new System.Drawing.Point(8, 147);
-            this.cmdluu.Name = "cmdluu";
-            this.cmdluu.Size = new System.Drawing.Size(73, 30);
-            this.cmdluu.TabIndex = 19;
-            this.cmdluu.Text = "Lưu";
-            this.cmdluu.UseVisualStyleBackColor = true;
+            this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuu.Location = new System.Drawing.Point(23, 188);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(84, 38);
+            this.btnLuu.TabIndex = 19;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // cmdthoat
+            // btnThoat
             // 
-            this.cmdthoat.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmdthoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdthoat.Image = ((System.Drawing.Image)(resources.GetObject("cmdthoat.Image")));
-            this.cmdthoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdthoat.Location = new System.Drawing.Point(8, 191);
-            this.cmdthoat.Name = "cmdthoat";
-            this.cmdthoat.Size = new System.Drawing.Size(73, 30);
-            this.cmdthoat.TabIndex = 16;
-            this.cmdthoat.Text = "Thoát";
-            this.cmdthoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
+            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThoat.Location = new System.Drawing.Point(23, 246);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(84, 38);
+            this.btnThoat.TabIndex = 16;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // cmdthem
+            // btnThem
             // 
-            this.cmdthem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmdthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdthem.Image = ((System.Drawing.Image)(resources.GetObject("cmdthem.Image")));
-            this.cmdthem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdthem.Location = new System.Drawing.Point(7, 15);
-            this.cmdthem.Name = "cmdthem";
-            this.cmdthem.Size = new System.Drawing.Size(73, 30);
-            this.cmdthem.TabIndex = 18;
-            this.cmdthem.Text = "Thêm";
-            this.cmdthem.UseVisualStyleBackColor = true;
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThem.Location = new System.Drawing.Point(22, 21);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(84, 38);
+            this.btnThem.TabIndex = 18;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // cmdCapnhat
+            // btnSua
             // 
-            this.cmdCapnhat.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmdCapnhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdCapnhat.Image = ((System.Drawing.Image)(resources.GetObject("cmdCapnhat.Image")));
-            this.cmdCapnhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdCapnhat.Location = new System.Drawing.Point(8, 59);
-            this.cmdCapnhat.Name = "cmdCapnhat";
-            this.cmdCapnhat.Size = new System.Drawing.Size(73, 30);
-            this.cmdCapnhat.TabIndex = 15;
-            this.cmdCapnhat.Text = "sửa";
-            this.cmdCapnhat.UseVisualStyleBackColor = true;
+            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Location = new System.Drawing.Point(23, 76);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(84, 38);
+            this.btnSua.TabIndex = 15;
+            this.btnSua.Text = "sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // cmdxoa
+            // btnXoa
             // 
-            this.cmdxoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmdxoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdxoa.Image = ((System.Drawing.Image)(resources.GetObject("cmdxoa.Image")));
-            this.cmdxoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdxoa.Location = new System.Drawing.Point(8, 103);
-            this.cmdxoa.Name = "cmdxoa";
-            this.cmdxoa.Size = new System.Drawing.Size(73, 30);
-            this.cmdxoa.TabIndex = 17;
-            this.cmdxoa.Text = "Xóa";
-            this.cmdxoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(23, 130);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(84, 38);
+            this.btnXoa.TabIndex = 17;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // frmDMDanToc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(458, 261);
+            this.ClientSize = new System.Drawing.Size(564, 334);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grpbox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDMDanToc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Mục Dân Tộc";
+            this.Load += new System.EventHandler(this.frmDMDanToc_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DMDanToc)).EndInit();
@@ -267,10 +274,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDT;
         private System.Windows.Forms.GroupBox grpbox;
-        private System.Windows.Forms.Button cmdluu;
-        private System.Windows.Forms.Button cmdthoat;
-        private System.Windows.Forms.Button cmdthem;
-        private System.Windows.Forms.Button cmdCapnhat;
-        private System.Windows.Forms.Button cmdxoa;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnXoa;
     }
 }
