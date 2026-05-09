@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDMNgoaiNgu));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txttenNN = new System.Windows.Forms.TextBox();
             this.txtmaNN = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_DMNN = new System.Windows.Forms.DataGridView();
-            this.MaNgoaiNgu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNgoaiNgu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpbox = new System.Windows.Forms.GroupBox();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
+            this.MaNgoaiNgu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNgoaiNgu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DMNN)).BeginInit();
             this.grpbox.SuspendLayout();
@@ -118,14 +118,14 @@
             // dgv_DMNN
             // 
             this.dgv_DMNN.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_DMNN.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_DMNN.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_DMNN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DMNN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNgoaiNgu,
@@ -140,33 +140,6 @@
             this.dgv_DMNN.Size = new System.Drawing.Size(484, 197);
             this.dgv_DMNN.TabIndex = 1;
             this.dgv_DMNN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DMNN_CellClick);
-            // 
-            // MaNgoaiNgu
-            // 
-            this.MaNgoaiNgu.DataPropertyName = "mangoaingu";
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.MaNgoaiNgu.DefaultCellStyle = dataGridViewCellStyle8;
-            this.MaNgoaiNgu.Frozen = true;
-            this.MaNgoaiNgu.HeaderText = "Mã";
-            this.MaNgoaiNgu.MinimumWidth = 6;
-            this.MaNgoaiNgu.Name = "MaNgoaiNgu";
-            this.MaNgoaiNgu.ReadOnly = true;
-            this.MaNgoaiNgu.Width = 60;
-            // 
-            // TenNgoaiNgu
-            // 
-            this.TenNgoaiNgu.DataPropertyName = "tenngoaingu";
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.TenNgoaiNgu.DefaultCellStyle = dataGridViewCellStyle9;
-            this.TenNgoaiNgu.HeaderText = "Tên ngoại ngữ";
-            this.TenNgoaiNgu.MinimumWidth = 6;
-            this.TenNgoaiNgu.Name = "TenNgoaiNgu";
-            this.TenNgoaiNgu.ReadOnly = true;
-            this.TenNgoaiNgu.Width = 150;
             // 
             // grpbox
             // 
@@ -258,6 +231,33 @@
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
+            // MaNgoaiNgu
+            // 
+            this.MaNgoaiNgu.DataPropertyName = "mangoaingu";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.MaNgoaiNgu.DefaultCellStyle = dataGridViewCellStyle2;
+            this.MaNgoaiNgu.Frozen = true;
+            this.MaNgoaiNgu.HeaderText = "Mã";
+            this.MaNgoaiNgu.MinimumWidth = 6;
+            this.MaNgoaiNgu.Name = "MaNgoaiNgu";
+            this.MaNgoaiNgu.ReadOnly = true;
+            this.MaNgoaiNgu.Width = 60;
+            // 
+            // TenNgoaiNgu
+            // 
+            this.TenNgoaiNgu.DataPropertyName = "tenngoaingu";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.TenNgoaiNgu.DefaultCellStyle = dataGridViewCellStyle3;
+            this.TenNgoaiNgu.HeaderText = "Tên ngoại ngữ";
+            this.TenNgoaiNgu.MinimumWidth = 6;
+            this.TenNgoaiNgu.Name = "TenNgoaiNgu";
+            this.TenNgoaiNgu.ReadOnly = true;
+            this.TenNgoaiNgu.Width = 300;
+            // 
             // frmDMNgoaiNgu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -287,13 +287,13 @@
         private System.Windows.Forms.TextBox txtmaNN;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgv_DMNN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaNgoaiNgu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenNgoaiNgu;
         private System.Windows.Forms.GroupBox grpbox;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNgoaiNgu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenNgoaiNgu;
     }
 }

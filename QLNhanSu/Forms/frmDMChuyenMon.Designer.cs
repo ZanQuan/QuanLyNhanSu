@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDMChuyenMon));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txttenCM = new System.Windows.Forms.TextBox();
             this.txtmaCM = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_DMchuyenmon = new System.Windows.Forms.DataGridView();
-            this.MaChuyenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenChuyenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpbox = new System.Windows.Forms.GroupBox();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
+            this.MaChuyenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenChuyenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DMchuyenmon)).BeginInit();
             this.grpbox.SuspendLayout();
@@ -116,17 +116,17 @@
             // 
             // dgv_DMchuyenmon
             // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.dgv_DMchuyenmon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.dgv_DMchuyenmon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_DMchuyenmon.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_DMchuyenmon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_DMchuyenmon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_DMchuyenmon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DMchuyenmon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaChuyenMon,
@@ -141,32 +141,6 @@
             this.dgv_DMchuyenmon.Size = new System.Drawing.Size(442, 185);
             this.dgv_DMchuyenmon.TabIndex = 1;
             this.dgv_DMchuyenmon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DMchuyenmon_CellClick);
-            // 
-            // MaChuyenMon
-            // 
-            this.MaChuyenMon.DataPropertyName = "MaChuyenMon";
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            this.MaChuyenMon.DefaultCellStyle = dataGridViewCellStyle7;
-            this.MaChuyenMon.Frozen = true;
-            this.MaChuyenMon.HeaderText = "Mã";
-            this.MaChuyenMon.MinimumWidth = 6;
-            this.MaChuyenMon.Name = "MaChuyenMon";
-            this.MaChuyenMon.ReadOnly = true;
-            this.MaChuyenMon.Width = 60;
-            // 
-            // TenChuyenMon
-            // 
-            this.TenChuyenMon.DataPropertyName = "TenChuyenMon";
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.TenChuyenMon.DefaultCellStyle = dataGridViewCellStyle8;
-            this.TenChuyenMon.HeaderText = "Tên chuyên môn";
-            this.TenChuyenMon.MinimumWidth = 6;
-            this.TenChuyenMon.Name = "TenChuyenMon";
-            this.TenChuyenMon.ReadOnly = true;
-            this.TenChuyenMon.Width = 180;
             // 
             // grpbox
             // 
@@ -258,6 +232,32 @@
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
+            // MaChuyenMon
+            // 
+            this.MaChuyenMon.DataPropertyName = "MaChuyenMon";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.MaChuyenMon.DefaultCellStyle = dataGridViewCellStyle3;
+            this.MaChuyenMon.Frozen = true;
+            this.MaChuyenMon.HeaderText = "Mã";
+            this.MaChuyenMon.MinimumWidth = 6;
+            this.MaChuyenMon.Name = "MaChuyenMon";
+            this.MaChuyenMon.ReadOnly = true;
+            this.MaChuyenMon.Width = 60;
+            // 
+            // TenChuyenMon
+            // 
+            this.TenChuyenMon.DataPropertyName = "TenChuyenMon";
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.TenChuyenMon.DefaultCellStyle = dataGridViewCellStyle4;
+            this.TenChuyenMon.HeaderText = "Tên chuyên môn";
+            this.TenChuyenMon.MinimumWidth = 6;
+            this.TenChuyenMon.Name = "TenChuyenMon";
+            this.TenChuyenMon.ReadOnly = true;
+            this.TenChuyenMon.Width = 250;
+            // 
             // frmDMChuyenMon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -287,13 +287,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgv_DMchuyenmon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaChuyenMon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenChuyenMon;
         private System.Windows.Forms.GroupBox grpbox;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaChuyenMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenChuyenMon;
     }
 }

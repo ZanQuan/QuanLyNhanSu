@@ -16,6 +16,8 @@ namespace QLNhanSu.Forms
         public static string TaiKhoanDangNhap = "";
         public static string VaiTroDangNhap = "";
         public static string MaNVDangNhap = "";
+        public static string MaTKDangNhap = "";                    
+        public static List<string> DanhSachQuyen = new List<string>();
         public frmDangNhap()
         {
             InitializeComponent();
@@ -26,53 +28,43 @@ namespace QLNhanSu.Forms
             string tenDN = txtTenDangNhap.Text.Trim();
             string matKhau = txtMatKhau.Text.Trim();
 
-            // Kiểm tra không được để trống
-            if (tenDN == "")
-            {
-                MessageBox.Show("Vui lòng nhập tên đăng nhập!", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtTenDangNhap.Focus();
-                return;
-            }
-            if (matKhau == "")
-            {
-                MessageBox.Show("Vui lòng nhập mật khẩu!", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtMatKhau.Focus();
-                return;
-            }
+            if (tenDN == "") { MessageBox.Show("Vui lòng nhập tên đăng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); txtTenDangNhap.Focus(); return; }
+            if (matKhau == "") { MessageBox.Show("Vui lòng nhập mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); txtMatKhau.Focus(); return; }
 
-            // Truy vấn database
             string sql = @"SELECT MaTK, TenDangNhap, VaiTro, MaNV 
-                           FROM TaiKhoan 
-                           WHERE TenDangNhap = @TenDN 
-                             AND MatKhau = @MK 
-                             AND TrangThai = 1";
+                       FROM TaiKhoan 
+                       WHERE TenDangNhap = @TenDN AND MatKhau = @MK AND TrangThai = 1";
 
             SqlParameter[] parameters = {
-                new SqlParameter("@TenDN", tenDN),
-                new SqlParameter("@MK",   matKhau)
-            };
+            new SqlParameter("@TenDN", tenDN),
+            new SqlParameter("@MK",   matKhau)
+        };
 
             DataTable dt = DataProvider.ExecuteQuery(sql, parameters);
 
             if (dt.Rows.Count > 0)
             {
-                // Lưu thông tin đăng nhập vào biến tĩnh
                 TaiKhoanDangNhap = dt.Rows[0]["TenDangNhap"].ToString();
                 VaiTroDangNhap = dt.Rows[0]["VaiTro"].ToString();
                 MaNVDangNhap = dt.Rows[0]["MaNV"].ToString();
+                MaTKDangNhap = dt.Rows[0]["MaTK"].ToString();
 
-                // Mở form chính
-                frmMain frm = new frmMain();
-                frm.Show();
-                this.Hide(); // Ẩn form đăng nhập (không đóng)
+                DanhSachQuyen.Clear();
+                DataTable dtQuyen = DataProvider.ExecuteQuery(
+                    "SELECT TenChucNang FROM PhanQuyen WHERE MaTK = @MaTK AND CoQuyen = 1",
+                    new[] { new SqlParameter("@MaTK", MaTKDangNhap) });
+                foreach (DataRow row in dtQuyen.Rows)
+                    DanhSachQuyen.Add(row["TenChucNang"].ToString());
+
+                
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+
             }
             else
             {
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!\nHoặc tài khoản đã bị khóa.",
-                    "Đăng nhập thất bại",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    "Đăng nhập thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMatKhau.Clear();
                 txtMatKhau.Focus();
             }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace QLNhanSu.Forms
 {
@@ -21,12 +22,36 @@ namespace QLNhanSu.Forms
         {
             // Hiển thị tên người đăng nhập ở thanh trạng thái
             toolStripStatusLabel2.Text = "Người đăng nhập: " + frmDangNhap.TaiKhoanDangNhap
-                                        + "  |  Vai trò: " + frmDangNhap.VaiTroDangNhap;
+                                + "  |  Vai trò: " + frmDangNhap.VaiTroDangNhap;
             trangthai.Text = "Trạng thái: Sẵn sàng";
 
-            // Nếu không phải Admin → ẩn menu Bảo mật
-            if (frmDangNhap.VaiTroDangNhap != "Admin")
-                menubaomat.Visible = false;
+            HienThiAnhNen();
+            // Admin thấy tất cả, không cần check từng quyền
+            if (frmDangNhap.VaiTroDangNhap == "Admin") return;
+
+            // Ẩn menu Bảo mật với non-Admin
+            menubaomat.Visible = false;
+
+            // ← THÊM: Hàm tiện ích kiểm tra quyền
+            bool CoQuyen(string tenChucNang) =>
+                frmDangNhap.DanhSachQuyen.Contains(tenChucNang);
+
+            // ← THÊM: Áp dụng quyền cho từng menu item
+            // (Tên chức năng phải khớp chính xác với TenChucNang trong bảng PhanQuyen)
+            hồSơCNVToolStripMenuItem.Visible = CoQuyen("Hồ sơ nhân viên");
+            danhMụcPhòngBanToolStripMenuItem.Visible = CoQuyen("Danh mục phòng ban");
+            toolStripMenuItem4.Visible = CoQuyen("Danh mục chức vụ");
+            danhMụcToolStripMenuItem.Visible = CoQuyen("Danh mục dân tộc");
+            danhMụcTônGiáoToolStripMenuItem.Visible = CoQuyen("Danh mục tôn giáo");
+            danhMụcTrìnhĐộToolStripMenuItem.Visible = CoQuyen("Danh mục trình độ");
+            danhMụcChuyênMônToolStripMenuItem.Visible = CoQuyen("Danh mục chuyên môn");
+            danhMụcNgoạiNgữToolStripMenuItem.Visible = CoQuyen("Danh mục ngoại ngữ");
+            danhMụcTổToolStripMenuItem.Visible = CoQuyen("Danh mục tổ");
+            danhMụcLoạiHĐToolStripMenuItem.Visible = CoQuyen("Danh mục loại HĐ");
+            bảngChấmCôngToolStripMenuItem.Visible = CoQuyen("Bảng lương");
+            bangtieleluongToolStripMenuItem.Visible = CoQuyen("Tỉ lệ lương");
+            báoCáoNhânSựToolStripMenuItem.Visible = CoQuyen("Báo cáo nhân sự");
+            báoCáoLươngthángToolStripMenuItem.Visible = CoQuyen("Báo cáo lương");
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,13 +98,13 @@ namespace QLNhanSu.Forms
 
         private void hồSơĐiềuĐộngKThưởngKLuậtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chức năng đang phát triển!", "Thông báo",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            frmChonBCNV frm = new frmChonBCNV();
+            frm.ShowDialog();
         }
 
         private void hoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmChonBCNV frm = new frmChonBCNV();
+            frmKiemTraHDHetHan frm = new frmKiemTraHDHetHan();
             frm.ShowDialog();
         }
 
@@ -175,8 +200,26 @@ namespace QLNhanSu.Forms
 
         private void thôngTinVềSảnPhẩmToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Phần mềm Quản lý Nhân sự\nNhóm sinh viên: Quân - Vinh\nNăm học: 2025-2026",
-                "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            frmGioiThieu frm = new frmGioiThieu(true);
+            frm.ShowDialog();
+        }
+        private void HienThiAnhNen()
+        {
+            string anhPath = System.IO.Path.Combine(
+                Application.StartupPath, "Images", "banner-Main.jpg");
+
+            if (!System.IO.File.Exists(anhPath)) return;
+
+            PictureBox pic = new PictureBox();
+            pic.Image = Image.FromFile(anhPath);
+            pic.SizeMode = PictureBoxSizeMode.Zoom;      
+            pic.Dock = DockStyle.Fill;               
+            pic.BackColor = Color.White;
+
+            
+            this.Controls.Add(pic);
+            pic.BringToFront();
+            pic.SendToBack();   
         }
     }
 }

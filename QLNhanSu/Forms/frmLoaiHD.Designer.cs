@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoaiHD));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txttenloai = new System.Windows.Forms.TextBox();
             this.txtmahd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dgv_DMHD = new System.Windows.Forms.DataGridView();
-            this.MaLoaiHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLoaiHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpbox = new System.Windows.Forms.GroupBox();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
+            this.MaLoaiHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLoaiHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DMHD)).BeginInit();
             this.grpbox.SuspendLayout();
@@ -61,7 +61,7 @@
             this.panel1.Location = new System.Drawing.Point(14, 17);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(447, 292);
+            this.panel1.Size = new System.Drawing.Size(681, 292);
             this.panel1.TabIndex = 18;
             // 
             // label2
@@ -128,36 +128,9 @@
             this.dgv_DMHD.RowHeadersWidth = 51;
             this.dgv_DMHD.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgv_DMHD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_DMHD.Size = new System.Drawing.Size(419, 197);
+            this.dgv_DMHD.Size = new System.Drawing.Size(664, 197);
             this.dgv_DMHD.TabIndex = 1;
             this.dgv_DMHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DMHD_CellClick);
-            // 
-            // MaLoaiHD
-            // 
-            this.MaLoaiHD.DataPropertyName = "Maloaihd";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.MaLoaiHD.DefaultCellStyle = dataGridViewCellStyle5;
-            this.MaLoaiHD.Frozen = true;
-            this.MaLoaiHD.HeaderText = "Mã loại HĐ";
-            this.MaLoaiHD.MinimumWidth = 6;
-            this.MaLoaiHD.Name = "MaLoaiHD";
-            this.MaLoaiHD.ReadOnly = true;
-            this.MaLoaiHD.Width = 125;
-            // 
-            // TenLoaiHD
-            // 
-            this.TenLoaiHD.DataPropertyName = "tenloaihd";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.TenLoaiHD.DefaultCellStyle = dataGridViewCellStyle6;
-            this.TenLoaiHD.HeaderText = "Tên loại HĐ";
-            this.TenLoaiHD.MinimumWidth = 6;
-            this.TenLoaiHD.Name = "TenLoaiHD";
-            this.TenLoaiHD.ReadOnly = true;
-            this.TenLoaiHD.Width = 180;
             // 
             // grpbox
             // 
@@ -166,7 +139,7 @@
             this.grpbox.Controls.Add(this.btnThem);
             this.grpbox.Controls.Add(this.btnSua);
             this.grpbox.Controls.Add(this.btnXoa);
-            this.grpbox.Location = new System.Drawing.Point(468, 10);
+            this.grpbox.Location = new System.Drawing.Point(703, 17);
             this.grpbox.Margin = new System.Windows.Forms.Padding(4);
             this.grpbox.Name = "grpbox";
             this.grpbox.Padding = new System.Windows.Forms.Padding(4);
@@ -249,12 +222,39 @@
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
+            // MaLoaiHD
+            // 
+            this.MaLoaiHD.DataPropertyName = "MaLoaiHD";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.MaLoaiHD.DefaultCellStyle = dataGridViewCellStyle1;
+            this.MaLoaiHD.Frozen = true;
+            this.MaLoaiHD.HeaderText = "Mã loại HĐ";
+            this.MaLoaiHD.MinimumWidth = 6;
+            this.MaLoaiHD.Name = "MaLoaiHD";
+            this.MaLoaiHD.ReadOnly = true;
+            this.MaLoaiHD.Width = 125;
+            // 
+            // TenLoaiHD
+            // 
+            this.TenLoaiHD.DataPropertyName = "TenLoai";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.TenLoaiHD.DefaultCellStyle = dataGridViewCellStyle2;
+            this.TenLoaiHD.HeaderText = "Tên loại HĐ";
+            this.TenLoaiHD.MinimumWidth = 6;
+            this.TenLoaiHD.Name = "TenLoaiHD";
+            this.TenLoaiHD.ReadOnly = true;
+            this.TenLoaiHD.Width = 300;
+            // 
             // frmLoaiHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(590, 318);
+            this.ClientSize = new System.Drawing.Size(824, 318);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grpbox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -278,13 +278,13 @@
         private System.Windows.Forms.TextBox txtmahd;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgv_DMHD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiHD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenLoaiHD;
         private System.Windows.Forms.GroupBox grpbox;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiHD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenLoaiHD;
     }
 }

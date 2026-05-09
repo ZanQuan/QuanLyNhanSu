@@ -1,4 +1,6 @@
-﻿namespace QLNhanSu.Forms
+﻿using System;
+
+namespace QLNhanSu.Forms
 {
     partial class frmChonBCLuong
     {
@@ -31,7 +33,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChonBCLuong));
             this.cbothangbh = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cmdinbh = new System.Windows.Forms.Button();
+            this.btnInBH = new System.Windows.Forms.Button();
             this.cboto = new System.Windows.Forms.ComboBox();
             this.cbophong = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,7 +47,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cmdin = new System.Windows.Forms.Button();
+            this.btnIn = new System.Windows.Forms.Button();
             this.tabbcluong = new System.Windows.Forms.TabPage();
             this.tabbcchung = new System.Windows.Forms.TabControl();
             this.panel1.SuspendLayout();
@@ -77,20 +79,21 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Năm :";
             // 
-            // cmdinbh
+            // btnInBH
             // 
-            this.cmdinbh.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cmdinbh.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdinbh.Image = ((System.Drawing.Image)(resources.GetObject("cmdinbh.Image")));
-            this.cmdinbh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdinbh.Location = new System.Drawing.Point(105, 92);
-            this.cmdinbh.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdinbh.Name = "cmdinbh";
-            this.cmdinbh.Size = new System.Drawing.Size(124, 37);
-            this.cmdinbh.TabIndex = 8;
-            this.cmdinbh.Tag = "";
-            this.cmdinbh.Text = "In";
-            this.cmdinbh.UseVisualStyleBackColor = false;
+            this.btnInBH.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnInBH.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInBH.Image = ((System.Drawing.Image)(resources.GetObject("btnInBH.Image")));
+            this.btnInBH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInBH.Location = new System.Drawing.Point(105, 92);
+            this.btnInBH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInBH.Name = "btnInBH";
+            this.btnInBH.Size = new System.Drawing.Size(124, 37);
+            this.btnInBH.TabIndex = 8;
+            this.btnInBH.Tag = "";
+            this.btnInBH.Text = "In";
+            this.btnInBH.UseVisualStyleBackColor = false;
+            this.btnInBH.Click += new System.EventHandler(this.btnInBH_Click);
             // 
             // cboto
             // 
@@ -111,6 +114,7 @@
             this.cbophong.Name = "cbophong";
             this.cbophong.Size = new System.Drawing.Size(209, 24);
             this.cbophong.TabIndex = 35;
+            this.cbophong.SelectedIndexChanged += new System.EventHandler(this.cbophong_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -174,7 +178,7 @@
             this.panel1.Controls.Add(this.cbothangbh);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.cmdinbh);
+            this.panel1.Controls.Add(this.btnInBH);
             this.panel1.Location = new System.Drawing.Point(5, 6);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
@@ -237,27 +241,28 @@
             this.panel2.Controls.Add(this.cbothangbc);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.cmdin);
+            this.panel2.Controls.Add(this.btnIn);
             this.panel2.Location = new System.Drawing.Point(5, 6);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(317, 160);
             this.panel2.TabIndex = 5;
             // 
-            // cmdin
+            // btnIn
             // 
-            this.cmdin.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cmdin.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdin.Image = ((System.Drawing.Image)(resources.GetObject("cmdin.Image")));
-            this.cmdin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdin.Location = new System.Drawing.Point(97, 113);
-            this.cmdin.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdin.Name = "cmdin";
-            this.cmdin.Size = new System.Drawing.Size(124, 37);
-            this.cmdin.TabIndex = 8;
-            this.cmdin.Tag = "";
-            this.cmdin.Text = "In";
-            this.cmdin.UseVisualStyleBackColor = false;
+            this.btnIn.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnIn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
+            this.btnIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIn.Location = new System.Drawing.Point(97, 113);
+            this.btnIn.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(124, 37);
+            this.btnIn.TabIndex = 8;
+            this.btnIn.Tag = "";
+            this.btnIn.Text = "In";
+            this.btnIn.UseVisualStyleBackColor = false;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // tabbcluong
             // 
@@ -293,6 +298,7 @@
             this.Name = "frmChonBCLuong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Báo cáo lương tháng";
+            this.Load += new System.EventHandler(this.frmChonBCLuong_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabbcbh.ResumeLayout(false);
@@ -308,7 +314,7 @@
 
         private System.Windows.Forms.ComboBox cbothangbh;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button cmdinbh;
+        private System.Windows.Forms.Button btnInBH;
         private System.Windows.Forms.ComboBox cboto;
         private System.Windows.Forms.ComboBox cbophong;
         private System.Windows.Forms.Label label5;
@@ -322,7 +328,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button cmdin;
+        private System.Windows.Forms.Button btnIn;
         private System.Windows.Forms.TabPage tabbcluong;
         private System.Windows.Forms.TabControl tabbcchung;
     }

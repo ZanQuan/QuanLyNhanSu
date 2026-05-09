@@ -98,6 +98,7 @@
             this.btnOK.Text = "Lưu phân quyền";
             this.btnOK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // cboNguoiDung
             // 
@@ -109,6 +110,7 @@
             this.cboNguoiDung.Name = "cboNguoiDung";
             this.cboNguoiDung.Size = new System.Drawing.Size(160, 24);
             this.cboNguoiDung.TabIndex = 5;
+            this.cboNguoiDung.SelectedIndexChanged += new System.EventHandler(this.cboNguoiDung_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -134,6 +136,7 @@
             this.Name = "frmPhanQuyen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phân Quyền";
+            this.Load += new System.EventHandler(this.frmPhanQuyen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhanQuyen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

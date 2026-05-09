@@ -51,6 +51,7 @@
             this.btnCancel.TabIndex = 13;
             this.btnCancel.Text = "Thoát";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOK
             // 
@@ -65,6 +66,7 @@
             this.btnOK.Text = "Chấp nhận";
             this.btnOK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // label3
             // 

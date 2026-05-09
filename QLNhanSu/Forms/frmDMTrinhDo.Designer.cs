@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDMTrinhDo));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_DMTD = new System.Windows.Forms.DataGridView();
-            this.MaTrinhDo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTrinhDo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txttenTD = new System.Windows.Forms.TextBox();
@@ -45,6 +43,8 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
+            this.MaTrinhDo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTrinhDo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DMTD)).BeginInit();
             this.panel1.SuspendLayout();
             this.grpbox.SuspendLayout();
@@ -67,31 +67,6 @@
             this.dgv_DMTD.Size = new System.Drawing.Size(443, 197);
             this.dgv_DMTD.TabIndex = 0;
             this.dgv_DMTD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DMTD_CellClick);
-            // 
-            // MaTrinhDo
-            // 
-            this.MaTrinhDo.DataPropertyName = "matrinhdo";
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.MaTrinhDo.DefaultCellStyle = dataGridViewCellStyle5;
-            this.MaTrinhDo.Frozen = true;
-            this.MaTrinhDo.HeaderText = "Mã";
-            this.MaTrinhDo.MinimumWidth = 6;
-            this.MaTrinhDo.Name = "MaTrinhDo";
-            this.MaTrinhDo.ReadOnly = true;
-            this.MaTrinhDo.Width = 60;
-            // 
-            // TenTrinhDo
-            // 
-            this.TenTrinhDo.DataPropertyName = "tentrinhdo";
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.TenTrinhDo.DefaultCellStyle = dataGridViewCellStyle6;
-            this.TenTrinhDo.HeaderText = "Tên trình độ";
-            this.TenTrinhDo.MinimumWidth = 6;
-            this.TenTrinhDo.Name = "TenTrinhDo";
-            this.TenTrinhDo.ReadOnly = true;
-            this.TenTrinhDo.Width = 180;
             // 
             // panel1
             // 
@@ -247,6 +222,31 @@
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
+            // MaTrinhDo
+            // 
+            this.MaTrinhDo.DataPropertyName = "matrinhdo";
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.MaTrinhDo.DefaultCellStyle = dataGridViewCellStyle1;
+            this.MaTrinhDo.Frozen = true;
+            this.MaTrinhDo.HeaderText = "Mã";
+            this.MaTrinhDo.MinimumWidth = 6;
+            this.MaTrinhDo.Name = "MaTrinhDo";
+            this.MaTrinhDo.ReadOnly = true;
+            this.MaTrinhDo.Width = 60;
+            // 
+            // TenTrinhDo
+            // 
+            this.TenTrinhDo.DataPropertyName = "tentrinhdo";
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.TenTrinhDo.DefaultCellStyle = dataGridViewCellStyle2;
+            this.TenTrinhDo.HeaderText = "Tên trình độ";
+            this.TenTrinhDo.MinimumWidth = 6;
+            this.TenTrinhDo.Name = "TenTrinhDo";
+            this.TenTrinhDo.ReadOnly = true;
+            this.TenTrinhDo.Width = 250;
+            // 
             // frmDMTrinhDo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -271,8 +271,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgv_DMTD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaTrinhDo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenTrinhDo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txttenTD;
@@ -284,5 +282,7 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTrinhDo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTrinhDo;
     }
 }

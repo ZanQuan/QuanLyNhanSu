@@ -57,10 +57,10 @@
             this.tennv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.honv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ma = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmdchamcong = new System.Windows.Forms.Button();
-            this.cmdtinhluong = new System.Windows.Forms.Button();
+            this.btnChamLuong = new System.Windows.Forms.Button();
+            this.btnTinhLuong = new System.Windows.Forms.Button();
             this.songaylv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btXoa = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.pcsinhhoatcc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblthang = new System.Windows.Forms.Label();
             this.grpbangluong = new System.Windows.Forms.GroupBox();
@@ -77,7 +77,7 @@
             this.Ten = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Ho = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MaNV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cmdluu = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lstNhanvien = new System.Windows.Forms.ListView();
             this.cboTo = new System.Windows.Forms.ComboBox();
@@ -104,7 +104,7 @@
             this.tilehq = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phucapkhac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpbox = new System.Windows.Forms.GroupBox();
-            this.btReset = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_bangluong = new System.Windows.Forms.DataGridView();
             this.grpchamcong.SuspendLayout();
@@ -407,36 +407,38 @@
             this.ma.ReadOnly = true;
             this.ma.Width = 125;
             // 
-            // cmdchamcong
+            // btnChamLuong
             // 
-            this.cmdchamcong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmdchamcong.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cmdchamcong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdchamcong.Image = ((System.Drawing.Image)(resources.GetObject("cmdchamcong.Image")));
-            this.cmdchamcong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdchamcong.Location = new System.Drawing.Point(26, 12);
-            this.cmdchamcong.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdchamcong.Name = "cmdchamcong";
-            this.cmdchamcong.Size = new System.Drawing.Size(133, 37);
-            this.cmdchamcong.TabIndex = 10;
-            this.cmdchamcong.Text = "Chấm Công";
-            this.cmdchamcong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cmdchamcong.UseVisualStyleBackColor = false;
+            this.btnChamLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnChamLuong.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnChamLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChamLuong.Image = ((System.Drawing.Image)(resources.GetObject("btnChamLuong.Image")));
+            this.btnChamLuong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChamLuong.Location = new System.Drawing.Point(26, 12);
+            this.btnChamLuong.Margin = new System.Windows.Forms.Padding(4);
+            this.btnChamLuong.Name = "btnChamLuong";
+            this.btnChamLuong.Size = new System.Drawing.Size(133, 37);
+            this.btnChamLuong.TabIndex = 10;
+            this.btnChamLuong.Text = "Chấm Công";
+            this.btnChamLuong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnChamLuong.UseVisualStyleBackColor = false;
+            this.btnChamLuong.Click += new System.EventHandler(this.btnChamLuong_Click);
             // 
-            // cmdtinhluong
+            // btnTinhLuong
             // 
-            this.cmdtinhluong.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cmdtinhluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdtinhluong.Image = ((System.Drawing.Image)(resources.GetObject("cmdtinhluong.Image")));
-            this.cmdtinhluong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdtinhluong.Location = new System.Drawing.Point(298, 511);
-            this.cmdtinhluong.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdtinhluong.Name = "cmdtinhluong";
-            this.cmdtinhluong.Size = new System.Drawing.Size(133, 37);
-            this.cmdtinhluong.TabIndex = 50;
-            this.cmdtinhluong.Text = "Tính Lương";
-            this.cmdtinhluong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cmdtinhluong.UseVisualStyleBackColor = false;
+            this.btnTinhLuong.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnTinhLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTinhLuong.Image = ((System.Drawing.Image)(resources.GetObject("btnTinhLuong.Image")));
+            this.btnTinhLuong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTinhLuong.Location = new System.Drawing.Point(298, 511);
+            this.btnTinhLuong.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTinhLuong.Name = "btnTinhLuong";
+            this.btnTinhLuong.Size = new System.Drawing.Size(133, 37);
+            this.btnTinhLuong.TabIndex = 50;
+            this.btnTinhLuong.Text = "Tính Lương";
+            this.btnTinhLuong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTinhLuong.UseVisualStyleBackColor = false;
+            this.btnTinhLuong.Click += new System.EventHandler(this.btnTinhLuong_Click);
             // 
             // songaylv
             // 
@@ -447,20 +449,21 @@
             this.songaylv.ReadOnly = true;
             this.songaylv.Width = 125;
             // 
-            // btXoa
+            // btnXoa
             // 
-            this.btXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btXoa.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoa.Image = ((System.Drawing.Image)(resources.GetObject("btXoa.Image")));
-            this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoa.Location = new System.Drawing.Point(308, 12);
-            this.btXoa.Margin = new System.Windows.Forms.Padding(4);
-            this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(133, 37);
-            this.btXoa.TabIndex = 15;
-            this.btXoa.Text = "Xóa";
-            this.btXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnXoa.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(308, 12);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(133, 37);
+            this.btnXoa.TabIndex = 15;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // pcsinhhoatcc
             // 
@@ -631,20 +634,21 @@
             this.MaNV.Text = "Mã NV";
             this.MaNV.Width = 49;
             // 
-            // cmdluu
+            // btnLuu
             // 
-            this.cmdluu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmdluu.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cmdluu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdluu.Image = ((System.Drawing.Image)(resources.GetObject("cmdluu.Image")));
-            this.cmdluu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdluu.Location = new System.Drawing.Point(167, 12);
-            this.cmdluu.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdluu.Name = "cmdluu";
-            this.cmdluu.Size = new System.Drawing.Size(133, 37);
-            this.cmdluu.TabIndex = 14;
-            this.cmdluu.Text = "Lưu";
-            this.cmdluu.UseVisualStyleBackColor = false;
+            this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLuu.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuu.Location = new System.Drawing.Point(167, 12);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(133, 37);
+            this.btnLuu.TabIndex = 14;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // panel1
             // 
@@ -678,6 +682,7 @@
             this.lstNhanvien.TabIndex = 3;
             this.lstNhanvien.UseCompatibleStateImageBehavior = false;
             this.lstNhanvien.View = System.Windows.Forms.View.Details;
+            this.lstNhanvien.SelectedIndexChanged += new System.EventHandler(this.lstNhanvien_SelectedIndexChanged);
             // 
             // cboTo
             // 
@@ -687,6 +692,7 @@
             this.cboTo.Name = "cboTo";
             this.cboTo.Size = new System.Drawing.Size(119, 24);
             this.cboTo.TabIndex = 2;
+            this.cboTo.SelectedIndexChanged += new System.EventHandler(this.cboTo_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -717,6 +723,7 @@
             this.cboPhong.Name = "cboPhong";
             this.cboPhong.Size = new System.Drawing.Size(189, 24);
             this.cboPhong.TabIndex = 1;
+            this.cboPhong.SelectedIndexChanged += new System.EventHandler(this.cboPhong_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -929,10 +936,10 @@
             // 
             // grpbox
             // 
-            this.grpbox.Controls.Add(this.btReset);
-            this.grpbox.Controls.Add(this.btXoa);
-            this.grpbox.Controls.Add(this.cmdluu);
-            this.grpbox.Controls.Add(this.cmdchamcong);
+            this.grpbox.Controls.Add(this.btnReset);
+            this.grpbox.Controls.Add(this.btnXoa);
+            this.grpbox.Controls.Add(this.btnLuu);
+            this.grpbox.Controls.Add(this.btnChamLuong);
             this.grpbox.Location = new System.Drawing.Point(79, 281);
             this.grpbox.Margin = new System.Windows.Forms.Padding(4);
             this.grpbox.Name = "grpbox";
@@ -941,20 +948,21 @@
             this.grpbox.TabIndex = 49;
             this.grpbox.TabStop = false;
             // 
-            // btReset
+            // btnReset
             // 
-            this.btReset.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btReset.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btReset.Image = ((System.Drawing.Image)(resources.GetObject("btReset.Image")));
-            this.btReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btReset.Location = new System.Drawing.Point(449, 12);
-            this.btReset.Margin = new System.Windows.Forms.Padding(4);
-            this.btReset.Name = "btReset";
-            this.btReset.Size = new System.Drawing.Size(133, 37);
-            this.btReset.TabIndex = 16;
-            this.btReset.Text = "Reset";
-            this.btReset.UseVisualStyleBackColor = false;
+            this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnReset.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
+            this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReset.Location = new System.Drawing.Point(449, 12);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(133, 37);
+            this.btnReset.TabIndex = 16;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // panel2
             // 
@@ -962,7 +970,7 @@
             this.panel2.Controls.Add(this.grpttnv);
             this.panel2.Controls.Add(this.grpbangluong);
             this.panel2.Controls.Add(this.grpchamcong);
-            this.panel2.Controls.Add(this.cmdtinhluong);
+            this.panel2.Controls.Add(this.btnTinhLuong);
             this.panel2.Controls.Add(this.grpbox);
             this.panel2.Controls.Add(this.dgv_bangluong);
             this.panel2.Location = new System.Drawing.Point(354, 45);
@@ -1007,6 +1015,7 @@
             this.dgv_bangluong.RowHeadersWidth = 51;
             this.dgv_bangluong.Size = new System.Drawing.Size(723, 169);
             this.dgv_bangluong.TabIndex = 48;
+            this.dgv_bangluong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_bangluong_CellClick);
             // 
             // frmBangLuong
             // 
@@ -1021,6 +1030,7 @@
             this.Name = "frmBangLuong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bảng Chấm Công & Bảng Lương";
+            this.Load += new System.EventHandler(this.frmBangLuong_Load);
             this.grpchamcong.ResumeLayout(false);
             this.grpchamcong.PerformLayout();
             this.grpbangluong.ResumeLayout(false);
@@ -1067,10 +1077,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tennv;
         private System.Windows.Forms.DataGridViewTextBoxColumn honv;
         private System.Windows.Forms.DataGridViewTextBoxColumn ma;
-        private System.Windows.Forms.Button cmdchamcong;
-        private System.Windows.Forms.Button cmdtinhluong;
+        private System.Windows.Forms.Button btnChamLuong;
+        private System.Windows.Forms.Button btnTinhLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn songaylv;
-        private System.Windows.Forms.Button btXoa;
+        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn pcsinhhoatcc;
         private System.Windows.Forms.Label lblthang;
         private System.Windows.Forms.GroupBox grpbangluong;
@@ -1087,7 +1097,7 @@
         private System.Windows.Forms.ColumnHeader Ten;
         private System.Windows.Forms.ColumnHeader Ho;
         private System.Windows.Forms.ColumnHeader MaNV;
-        private System.Windows.Forms.Button cmdluu;
+        private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListView lstNhanvien;
         private System.Windows.Forms.ComboBox cboTo;
@@ -1114,7 +1124,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tilehq;
         private System.Windows.Forms.DataGridViewTextBoxColumn phucapkhac;
         private System.Windows.Forms.GroupBox grpbox;
-        private System.Windows.Forms.Button btReset;
+        private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgv_bangluong;
     }

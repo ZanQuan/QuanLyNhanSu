@@ -36,7 +36,7 @@
             this.cbophong = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmdin = new System.Windows.Forms.Button();
+            this.btnIn = new System.Windows.Forms.Button();
             this.tabbcchung.SuspendLayout();
             this.tabbcluong.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -71,7 +71,7 @@
             this.panel2.Controls.Add(this.cbophong);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.cmdin);
+            this.panel2.Controls.Add(this.btnIn);
             this.panel2.Location = new System.Drawing.Point(5, 6);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
@@ -97,6 +97,7 @@
             this.cbophong.Name = "cbophong";
             this.cbophong.Size = new System.Drawing.Size(209, 24);
             this.cbophong.TabIndex = 35;
+            this.cbophong.SelectedIndexChanged += new System.EventHandler(this.cbophong_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -120,20 +121,21 @@
             this.label6.TabIndex = 33;
             this.label6.Text = "Phòng :";
             // 
-            // cmdin
+            // btnIn
             // 
-            this.cmdin.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cmdin.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdin.Image = ((System.Drawing.Image)(resources.GetObject("cmdin.Image")));
-            this.cmdin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdin.Location = new System.Drawing.Point(97, 90);
-            this.cmdin.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdin.Name = "cmdin";
-            this.cmdin.Size = new System.Drawing.Size(124, 37);
-            this.cmdin.TabIndex = 8;
-            this.cmdin.Tag = "";
-            this.cmdin.Text = "In";
-            this.cmdin.UseVisualStyleBackColor = false;
+            this.btnIn.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnIn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.Image = ((System.Drawing.Image)(resources.GetObject("btnIn.Image")));
+            this.btnIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIn.Location = new System.Drawing.Point(97, 90);
+            this.btnIn.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(124, 37);
+            this.btnIn.TabIndex = 8;
+            this.btnIn.Tag = "";
+            this.btnIn.Text = "In";
+            this.btnIn.UseVisualStyleBackColor = false;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // frmChonBCNV
             // 
@@ -146,6 +148,7 @@
             this.Name = "frmChonBCNV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Báo cáo nhân sự";
+            this.Load += new System.EventHandler(this.frmChonBCNV_Load);
             this.tabbcchung.ResumeLayout(false);
             this.tabbcluong.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -163,6 +166,6 @@
         private System.Windows.Forms.ComboBox cbophong;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button cmdin;
+        private System.Windows.Forms.Button btnIn;
     }
 }

@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition"
+        xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+	<DataSources>
+		<DataSource Name="dsHDHetHan">
+			<ConnectionProperties>
+				<DataProvider>System.Data.DataSet</DataProvider>
+				<ConnectString>/* Local Connection */</ConnectString>
+			</ConnectionProperties>
+			<rd:DataSourceID>92771b34-7649-4b87-81d5-a51213882f3d</rd:DataSourceID>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="dsHDHetHan">
+			<Query>
+				<DataSourceName>dsHDHetHan</DataSourceName>
+				<CommandText>/* Local Query */</CommandText>
+			</Query>
+			<Fields>
+				<Field Name="STT">
+					<DataField>STT</DataField>
+					<rd:TypeName>System.Int64</rd:TypeName>
+				</Field>
+				<Field Name="MaNV">
+					<DataField>MaNV</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="HoTen">
+					<DataField>HoTen</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="TenPhong">
+					<DataField>TenPhong</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="TenTo">
+					<DataField>TenTo</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="LoaiHD">
+					<DataField>LoaiHD</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="SoHD">
+					<DataField>SoHD</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="NgayKy">
+					<DataField>NgayKy</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="NgayKetThuc">
+					<DataField>NgayKetThuc</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="SoNgayConLai">
+					<DataField>SoNgayConLai</DataField>
+					<rd:TypeName>System.Int32</rd:TypeName>
+				</Field>
+				<Field Name="TrangThai">
+					<DataField>TrangThai</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="TieuDeLoc">
+					<DataField>TieuDeLoc</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+			</Fields>
+		</DataSet>
+	</DataSets>
+	<Body>
+		<ReportItems>
+
+			<!-- TIÊU ĐỀ CÔNG TY -->
+			<Textbox Name="txtCongTy">
+				<CanGrow>true</CanGrow>
+				<Paragraphs>
+					<Paragraph>
+						<TextRuns>
+							<TextRun>
+								<Value>CÔNG TY CỔ PHẦN QUẢN LÝ NHÂN SỰ</Value>
+								<Style>
+									<FontFamily>Times New Roman</FontFamily>
+									<FontSize>11pt</FontSize>
+									<FontWeight>Bold</FontWeight>
+								</Style>
+							</TextRun>
+						</TextRuns>
+						<Style>
+							<TextAlign>Center</TextAlign>
+						</Style>
+					</Paragraph>
+				</Paragraphs>
+				<Top>0.1cm</Top>
+				<Left>0cm</Left>
+				<Height>0.7cm</Height>
+				<Width>19cm</Width>
+				<Style>
+					<Border>
+						<Style>None</Style>
+					</Border>
+				</Style>
+			</Textbox>
+
+			<!-- TIÊU ĐỀ BÁO CÁO -->
+			<Textbox Name="txtTieuDe">
+				<CanGrow>true</CanGrow>
+				<Paragraphs>
+					<Paragraph>
+						<TextRuns>
+							<TextRun>
+								<Value>DANH SÁCH NHÂN VIÊN HẾT HẠN HỢP ĐỒNG</Value>
+								<Style>
+									<FontFamily>Times New Roman</FontFamily>
+									<FontSize>16pt</FontSize>
+									<FontWeight>Bold</FontWeight>
+								</Style>
+							</TextRun>
+						</TextRuns>
+						<Style>
+							<TextAlign>Center</TextAlign>
+						</Style>
+					</Paragraph>
+				</Paragraphs>
+				<Top>0.9cm</Top>
+				<Left>0cm</Left>
+				<Height>1cm</Height>
+				<Width>19cm</Width>
+				<Style>
+					<Border>
+						<Style>None</Style>
+					</Border>
+				</Style>
+			</Textbox>
+
+			<!-- DÒNG LỌC THÁNG/NĂM -->
+			<Textbox Name="txtTieuDeLoc">
+				<CanGrow>true</CanGrow>
+				<Paragraphs>
+					<Paragraph>
+						<TextRuns>
+							<TextRun>
+								<Value>=First(Fields!TieuDeLoc.Value, "dsHDHetHan")</Value>
+								<Style>
+									<FontFamily>Times New Roman</FontFamily>
+									<FontSize>11pt</FontSize>
+									<FontStyle>Italic</FontStyle>
+								</Style>
+							</TextRun>
+						</TextRuns>
+						<Style>
+							<TextAlign>Center</TextAlign>
+						</Style>
+					</Paragraph>
+				</Paragraphs>
+				<Top>2.0cm</Top>
+				<Left>0cm</Left>
+				<Height>0.6cm</Height>
+				<Width>19cm</Width>
+				<Style>
+					<Border>
+						<Style>None</Style>
+					</Border>
+				</Style>
+			</Textbox>
+
+			<!-- NGÀY IN -->
+			<Textbox Name="txtNgayIn">
+				<CanGrow>true</CanGrow>
+				<Paragraphs>
+					<Paragraph>
+						<TextRuns>
+							<TextRun>
+								<Value>=("Ngày in: " &amp; Format(Now(), "dd/MM/yyyy"))</Value>
+								<Style>
+									<FontFamily>Times New Roman</FontFamily>
+									<FontSize>10pt</FontSize>
+									<FontStyle>Italic</FontStyle>
+								</Style>
+							</TextRun>
+						</TextRuns>
+						<Style>
+							<TextAlign>Right</TextAlign>
+						</Style>
+					</Paragraph>
+				</Paragraphs>
+				<Top>2.0cm</Top>
+				<Left>13cm</Left>
+				<Height>0.6cm</Height>
+				<Width>6cm</Width>
+				<Style>
+					<Border>
+						<Style>None</Style>
+					</Border>
+				</Style>
+			</Textbox>
+
+			<!-- BẢNG DỮ LIỆU -->
+			<Tablix Name="Tablix1">
+				<TablixBody>
+					<TablixColumns>
+						<TablixColumn>
+							<Width>0.8cm</Width>
+						</TablixColumn>
+						<TablixColumn>
+							<Width>1.6cm</Width>
+						</TablixColumn>
+						<TablixColumn>
+							<Width>3.5cm</Width>
+						</TablixColumn>
+						<TablixColumn>
+							<Width>2.8cm</Width>
+						</TablixColumn>
+						<TablixColumn>
+							<Width>1.8cm</Width>
+						</TablixColumn>
+						<TablixColumn>
+							<Width>3.2cm</Width>
+						</TablixColumn>
+						<TablixColumn>
+							<Width>2.2cm</Width>
+						</TablixColumn>
+						<TablixColumn>
+							<Width>3.1cm</Width>
+						</TablixColumn>
+					</TablixColumns>
+					<TablixRows>
+						<!-- HEADER ROW -->
+						<TablixRow>
+							<Height>0.8cm</Height>
+							<TablixCells>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="H0">
+											<CanGrow>true</CanGrow>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>STT</Value>
+															<Style>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+																<FontWeight>Bold</FontWeight>
+															</Style>
+														</TextRun>
+													</TextRuns>
+													<Style>
+														<TextAlign>Center</TextAlign>
+													</Style>
+												</Paragraph>
+											</Paragraphs>
+											<Style>
+												<BackgroundColor>#4472C4</BackgroundColor>
+												<Color>White</Color>
+												<Border>
+													<Style>Solid</Style>
+													<Color>White</Color>
+													<Width>1pt</Width>
+												</Border>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="H1">
+											<CanGrow>true</CanGrow>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>Mã NV</Value>
+															<Style>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+																<FontWeight>Bold</FontWeight>
+															</Style>
+														</TextRun>
+													</TextRuns>
+													<Style>
+														<TextAlign>Center</TextAlign>
+													</Style>
+												</Paragraph>
+											</Paragraphs>
+											<Style>
+												<BackgroundColor>#4472C4</BackgroundColor>
+												<Color>White</Color>
+												<Border>
+													<Style>Solid</Style>
+													<Color>White</Color>
+													<Width>1pt</Width>
+												</Border>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="H2">
+											<CanGrow>true</CanGrow>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>Họ Tên</Value>
+															<Style>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+																<FontWeight>Bold</FontWeight>
+															</Style>
+														</TextRun>
+													</TextRuns>
+													<Style>
+														<TextAlign>Center</TextAlign>
+													</Style>
+												</Paragraph>
+											</Paragraphs>
+											<Style>
+												<BackgroundColor>#4472C4</BackgroundColor>
+												<Color>White</Color>
+												<Border>
+													<Style>Solid</Style>
+													<Color>White</Color>
+													<Width>1pt</Width>
+												</Border>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="H3">
+											<CanGrow>true</CanGrow>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>Phòng Ban</Value>
+															<Style>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+																<FontWeight>Bold</FontWeight>
+															</Style>
+														</TextRun>
+													</TextRuns>
+													<Style>
+														<TextAlign>Center</TextAlign>
+													</Style>
+												</Paragraph>
+											</Paragraphs>
+											<Style>
+												<BackgroundColor>#4472C4</BackgroundColor>
+												<Color>White</Color>
+												<Border>
+													<Style>Solid</Style>
+													<Color>White</Color>
+													<Width>1pt</Width>
+												</Border>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="H4">
+											<CanGrow>true</CanGrow>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>Tổ</Value>
+															<Style>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+																<FontWeight>Bold</FontWeight>
+															</Style>
+														</TextRun>
+													</TextRuns>
+													<Style>
+														<TextAlign>Center</TextAlign>
+													</Style>
+												</Paragraph>
+											</Paragraphs>
+											<Style>
+												<BackgroundColor>#4472C4</BackgroundColor>
+												<Color>White</Color>
+												<Border>
+													<Style>Solid</Style>
+													<Color>White</Color>
+													<Width>1pt</Width>
+												</Border>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="H5">
+											<CanGrow>true</CanGrow>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>Loại Hợp Đồng</Value>
+															<Style>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+																<FontWeight>Bold</FontWeight>
+															</Style>
+														</TextRun>
+													</TextRuns>
+													<Style>
+														<TextAlign>Center</TextAlign>
+													</Style>
+												</Paragraph>
+											</Paragraphs>
+											<Style>
+												<BackgroundColor>#4472C4</BackgroundColor>
+												<Color>White</Color>
+												<Border>
+													<Style>Solid</Style>
+													<Color>White</Color>
+													<Width>1pt</Width>
+												</Border>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="H6">
+											<CanGrow>true</CanGrow>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>Ngày KT</Value>
+															<Style>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+																<FontWeight>Bold</FontWeight>
+															</Style>
+														</TextRun>
+													</TextRuns>
+													<Style>
+														<TextAlign>Center</TextAlign>
+													</Style>
+												</Paragraph>
+											</Paragraphs>
+											<Style>
+												<BackgroundColor>#4472C4</BackgroundColor>
+												<Color>White</Color>
+												<Border>
+													<Style>Solid</Style>
+													<Color>White</Color>
+													<Width>1pt</Width>
+												</Border>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="H7">
+											<CanGrow>true</CanGrow>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>Trạng Thái</Value>
+															<Style>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+																<FontWeight>Bold</FontWeight>
+															</Style>
+														</TextRun>
+													</TextRuns>
+													<Style>
+														<TextAlign>Center</TextAlign>
+													</Style>
+												</Paragraph>
+											</Paragraphs>
+											<Style>
+												<BackgroundColor>#4472C4</BackgroundColor>
+												<Color>White</Color>
+												<Border>
+													<Style>Solid</Style>
+													<Color>White</Color>
+													<Width>1pt</Width>
+												</Border>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+							</TablixCells>
+						</TablixRow>
+						<!-- DATA ROW -->
+						<TablixRow>
+							<Height>0.65cm</Height>
+							<TablixCells>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="D0">
+											<CanGrow>true</CanGrow>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>=Fields!STT.Value</Value>
+															<Style>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+															</Style>
+														</TextRun>
+													</TextRuns>
+													<Style>
+														<TextAlign>Center</TextAlign>
+													</Style>
+												</Paragraph>
+											</Paragraphs>
+											<Style>
+												<Border>
+													<Style>Solid</Style>
+													<Color>#D0D0D0</Color>
+												</Border>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="D1">
+											<CanGrow>true</CanGrow>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>=Fields!MaNV.Value</Value>
+															<Style>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+															</Style>
+														</TextRun>
+													</TextRuns>
+													<Style>
+														<TextAlign>Center</TextAlign>
+													</Style>
+												</Paragraph>
+											</Paragraphs>
+											<Style>
+												<Border>
+													<Style>Solid</Style>
+													<Color>#D0D0D0</Color>
+												</Border>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="D2">
+											<CanGrow>true</CanGrow>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>=Fields!HoTen.Value</Value>
+															<Style>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+															</Style>
+														</TextRun>
+													</TextRuns>
+													<Style>
+														<TextAlign>Left</TextAlign>
+													</Style>
+												</Paragraph>
+											</Paragraphs>
+											<Style>
+												<Border>
+													<Style>Solid</Style>
+													<Color>#D0D0D0</Color>
+												</Border>
+												<PaddingLeft>3pt</PaddingLeft>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="D3">
+											<CanGrow>true</CanGrow>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>=Fields!TenPhong.Value</Value>
+															<Style>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+															</Style>
+														</TextRun>
+													</TextRuns>
+													<Style>
+														<TextAlign>Left</TextAlign>
+													</Style>
+												</Paragraph>
+											</Paragraphs>
+											<Style>
+												<Border>
+													<Style>Solid</Style>
+													<Color>#D0D0D0</Color>
+												</Border>
+												<PaddingLeft>3pt</PaddingLeft>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="D4">
+											<CanGrow>true</CanGrow>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>=Fields!TenTo.Value</Value>
+															<Style>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+															</Style>
+														</TextRun>
+													</TextRuns>
+													<Style>
+														<TextAlign>Center</TextAlign>
+													</Style>
+												</Paragraph>
+											</Paragraphs>
+											<Style>
+												<Border>
+													<Style>Solid</Style>
+													<Color>#D0D0D0</Color>
+												</Border>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="D5">
+											<CanGrow>true</CanGrow>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>=Fields!LoaiHD.Value</Value>
+															<Style>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+															</Style>
+														</TextRun>
+													</TextRuns>
+													<Style>
+														<TextAlign>Left</TextAlign>
+													</Style>
+												</Paragraph>
+											</Paragraphs>
+											<Style>
+												<Border>
+													<Style>Solid</Style>
+													<Color>#D0D0D0</Color>
+												</Border>
+												<PaddingLeft>3pt</PaddingLeft>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="D6">
+											<CanGrow>true</CanGrow>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>=Fields!NgayKetThuc.Value</Value>
+															<Style>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+															</Style>
+														</TextRun>
+													</TextRuns>
+													<Style>
+														<TextAlign>Center</TextAlign>
+													</Style>
+												</Paragraph>
+											</Paragraphs>
+											<Style>
+												<Border>
+													<Style>Solid</Style>
+													<Color>#D0D0D0</Color>
+												</Border>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="D7">
+											<CanGrow>true</CanGrow>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>=Fields!TrangThai.Value</Value>
+															<Style>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+																<FontWeight>Bold</FontWeight>
+																<Color>=IIF(Fields!SoNgayConLai.Value &lt; 0, "DarkRed", IIF(Fields!SoNgayConLai.Value &lt;= 7, "OrangeRed", IIF(Fields!SoNgayConLai.Value &lt;= 30, "DarkOrange", "DarkGreen")))</Color>
+															</Style>
+														</TextRun>
+													</TextRuns>
+													<Style>
+														<TextAlign>Center</TextAlign>
+													</Style>
+												</Paragraph>
+											</Paragraphs>
+											<Style>
+												<Border>
+													<Style>Solid</Style>
+													<Color>#D0D0D0</Color>
+												</Border>
+											</Style>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+							</TablixCells>
+						</TablixRow>
+					</TablixRows>
+				</TablixBody>
+				<TablixColumnHierarchy>
+					<TablixMembers>
+						<TablixMember/>
+						<TablixMember/>
+						<TablixMember/>
+						<TablixMember/>
+						<TablixMember/>
+						<TablixMember/>
+						<TablixMember/>
+						<TablixMember/>
+					</TablixMembers>
+				</TablixColumnHierarchy>
+				<TablixRowHierarchy>
+					<TablixMembers>
+						<TablixMember>
+							<KeepWithGroup>After</KeepWithGroup>
+							<RepeatOnNewPage>true</RepeatOnNewPage>
+							<KeepTogether>true</KeepTogether>
+						</TablixMember>
+						<TablixMember>
+							<Group Name="Detail"/>
+							<TablixMembers>
+								<TablixMember/>
+							</TablixMembers>
+						</TablixMember>
+					</TablixMembers>
+				</TablixRowHierarchy>
+				<DataSetName>dsHDHetHan</DataSetName>
+				<Top>2.8cm</Top>
+				<Left>0cm</Left>
+				<Height>1.45cm</Height>
+				<Width>19cm</Width>
+				<Style/>
+			</Tablix>
+
+			<!-- TỔNG SỐ -->
+			<Textbox Name="txtTong">
+				<CanGrow>true</CanGrow>
+				<Paragraphs>
+					<Paragraph>
+						<TextRuns>
+							<TextRun>
+								<Value>Tổng số hợp đồng: </Value>
+								<Style>
+									<FontFamily>Times New Roman</FontFamily>
+									<FontSize>11pt</FontSize>
+									<FontWeight>Bold</FontWeight>
+								</Style>
+							</TextRun>
+							<TextRun>
+								<Value>=CountRows("dsHDHetHan")</Value>
+								<Style>
+									<FontFamily>Times New Roman</FontFamily>
+									<FontSize>11pt</FontSize>
+									<FontWeight>Bold</FontWeight>
+								</Style>
+							</TextRun>
+						</TextRuns>
+						<Style>
+							<TextAlign>Left</TextAlign>
+						</Style>
+					</Paragraph>
+				</Paragraphs>
+				<Top>12cm</Top>
+				<Left>0cm</Left>
+				<Height>0.7cm</Height>
+				<Width>10cm</Width>
+				<Style>
+					<Border>
+						<Style>None</Style>
+					</Border>
+				</Style>
+			</Textbox>
+
+			<!-- CHỮ KÝ -->
+			<Textbox Name="txtChuKy">
+				<CanGrow>true</CanGrow>
+				<Paragraphs>
+					<Paragraph>
+						<TextRuns>
+							<TextRun>
+								<Value>Trưởng phòng Nhân Sự</Value>
+								<Style>
+									<FontFamily>Times New Roman</FontFamily>
+									<FontSize>11pt</FontSize>
+									<FontWeight>Bold</FontWeight>
+								</Style>
+							</TextRun>
+						</TextRuns>
+						<Style>
+							<TextAlign>Center</TextAlign>
+						</Style>
+					</Paragraph>
+				</Paragraphs>
+				<Top>13cm</Top>
+				<Left>12cm</Left>
+				<Height>0.7cm</Height>
+				<Width>7cm</Width>
+				<Style>
+					<Border>
+						<Style>None</Style>
+					</Border>
+				</Style>
+			</Textbox>
+
+		</ReportItems>
+		<Height>18cm</Height>
+	</Body>
+	<Page>
+		<PageHeader>
+			<Height>0cm</Height>
+			<PrintOnFirstPage>true</PrintOnFirstPage>
+			<PrintOnLastPage>true</PrintOnLastPage>
+		</PageHeader>
+		<PageFooter>
+			<Height>0.8cm</Height>
+			<PrintOnFirstPage>true</PrintOnFirstPage>
+			<PrintOnLastPage>true</PrintOnLastPage>
+			<ReportItems>
+				<Textbox Name="txtPageNum">
+					<CanGrow>true</CanGrow>
+					<Paragraphs>
+						<Paragraph>
+							<TextRuns>
+								<TextRun>
+									<Value>=("Trang " &amp; Globals!PageNumber &amp; "/" &amp; Globals!TotalPages)</Value>
+									<Style>
+										<FontFamily>Times New Roman</FontFamily>
+										<FontSize>10pt</FontSize>
+									</Style>
+								</TextRun>
+							</TextRuns>
+							<Style>
+								<TextAlign>Center</TextAlign>
+							</Style>
+						</Paragraph>
+					</Paragraphs>
+					<Top>0.1cm</Top>
+					<Left>0cm</Left>
+					<Height>0.6cm</Height>
+					<Width>19cm</Width>
+					<Style>
+						<Border>
+							<Style>None</Style>
+						</Border>
+					</Style>
+				</Textbox>
+			</ReportItems>
+		</PageFooter>
+		<TopMargin>1.5cm</TopMargin>
+		<BottomMargin>1.5cm</BottomMargin>
+		<LeftMargin>1.5cm</LeftMargin>
+		<RightMargin>1.5cm</RightMargin>
+		<PageWidth>21cm</PageWidth>
+		<PageHeight>29.7cm</PageHeight>
+	</Page>
+	<Width>19cm</Width>
+	<rd:ReportUnitType>Cm</rd:ReportUnitType>
+	<rd:ReportID>f3a92c10-84de-4e71-b123-7d5e08c61af9</rd:ReportID>
+</Report>

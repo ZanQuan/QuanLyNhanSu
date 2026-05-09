@@ -28,7 +28,11 @@ namespace QLNhanSu
                 return;
             }
 
-            Application.Run(new frmDangNhap());
+            frmGioiThieu splash = new frmGioiThieu();
+            if (splash.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new frmMain());
+            }
         }
     }
 }

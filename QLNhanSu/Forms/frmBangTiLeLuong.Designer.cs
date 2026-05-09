@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBangTiLeLuong));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.cmdluu = new System.Windows.Forms.Button();
-            this.cmdthoat = new System.Windows.Forms.Button();
-            this.cmdthem = new System.Windows.Forms.Button();
-            this.cmdxoa = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.grpbox = new System.Windows.Forms.GroupBox();
-            this.cmdCapnhat = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
             this.maphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,69 +64,73 @@
             this.pnlthongtin.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cmdluu
+            // btnLuu
             // 
-            this.cmdluu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmdluu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdluu.Image = ((System.Drawing.Image)(resources.GetObject("cmdluu.Image")));
-            this.cmdluu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdluu.Location = new System.Drawing.Point(296, 11);
-            this.cmdluu.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdluu.Name = "cmdluu";
-            this.cmdluu.Size = new System.Drawing.Size(96, 37);
-            this.cmdluu.TabIndex = 4;
-            this.cmdluu.Text = "Lưu";
-            this.cmdluu.UseVisualStyleBackColor = true;
+            this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuu.Location = new System.Drawing.Point(296, 11);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(96, 37);
+            this.btnLuu.TabIndex = 4;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // cmdthoat
+            // btnThoat
             // 
-            this.cmdthoat.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmdthoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdthoat.Image = ((System.Drawing.Image)(resources.GetObject("cmdthoat.Image")));
-            this.cmdthoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdthoat.Location = new System.Drawing.Point(393, 11);
-            this.cmdthoat.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdthoat.Name = "cmdthoat";
-            this.cmdthoat.Size = new System.Drawing.Size(96, 37);
-            this.cmdthoat.TabIndex = 5;
-            this.cmdthoat.Text = "Thoát";
-            this.cmdthoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
+            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThoat.Location = new System.Drawing.Point(393, 11);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(96, 37);
+            this.btnThoat.TabIndex = 5;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // cmdthem
+            // btnThem
             // 
-            this.cmdthem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmdthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdthem.Image = ((System.Drawing.Image)(resources.GetObject("cmdthem.Image")));
-            this.cmdthem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdthem.Location = new System.Drawing.Point(7, 11);
-            this.cmdthem.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdthem.Name = "cmdthem";
-            this.cmdthem.Size = new System.Drawing.Size(96, 37);
-            this.cmdthem.TabIndex = 1;
-            this.cmdthem.Text = "Thêm";
-            this.cmdthem.UseVisualStyleBackColor = true;
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThem.Location = new System.Drawing.Point(7, 11);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(96, 37);
+            this.btnThem.TabIndex = 1;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // cmdxoa
+            // btnXoa
             // 
-            this.cmdxoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmdxoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdxoa.Image = ((System.Drawing.Image)(resources.GetObject("cmdxoa.Image")));
-            this.cmdxoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdxoa.Location = new System.Drawing.Point(199, 11);
-            this.cmdxoa.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdxoa.Name = "cmdxoa";
-            this.cmdxoa.Size = new System.Drawing.Size(96, 37);
-            this.cmdxoa.TabIndex = 3;
-            this.cmdxoa.Text = "Xóa";
-            this.cmdxoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(199, 11);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(96, 37);
+            this.btnXoa.TabIndex = 3;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // grpbox
             // 
-            this.grpbox.Controls.Add(this.cmdluu);
-            this.grpbox.Controls.Add(this.cmdthoat);
-            this.grpbox.Controls.Add(this.cmdthem);
-            this.grpbox.Controls.Add(this.cmdCapnhat);
-            this.grpbox.Controls.Add(this.cmdxoa);
+            this.grpbox.Controls.Add(this.btnLuu);
+            this.grpbox.Controls.Add(this.btnThoat);
+            this.grpbox.Controls.Add(this.btnThem);
+            this.grpbox.Controls.Add(this.btnSua);
+            this.grpbox.Controls.Add(this.btnXoa);
             this.grpbox.Location = new System.Drawing.Point(81, 324);
             this.grpbox.Margin = new System.Windows.Forms.Padding(4);
             this.grpbox.Name = "grpbox";
@@ -135,19 +139,20 @@
             this.grpbox.TabIndex = 16;
             this.grpbox.TabStop = false;
             // 
-            // cmdCapnhat
+            // btnSua
             // 
-            this.cmdCapnhat.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmdCapnhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdCapnhat.Image = ((System.Drawing.Image)(resources.GetObject("cmdCapnhat.Image")));
-            this.cmdCapnhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdCapnhat.Location = new System.Drawing.Point(104, 11);
-            this.cmdCapnhat.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdCapnhat.Name = "cmdCapnhat";
-            this.cmdCapnhat.Size = new System.Drawing.Size(96, 37);
-            this.cmdCapnhat.TabIndex = 2;
-            this.cmdCapnhat.Text = "Sửa";
-            this.cmdCapnhat.UseVisualStyleBackColor = true;
+            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Location = new System.Drawing.Point(104, 11);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(96, 37);
+            this.btnSua.TabIndex = 2;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // maphong
             // 
@@ -162,9 +167,9 @@
             // MaTo
             // 
             this.MaTo.DataPropertyName = "mato";
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LemonChiffon;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.MaTo.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.MaTo.DefaultCellStyle = dataGridViewCellStyle6;
             this.MaTo.HeaderText = "mato";
             this.MaTo.MinimumWidth = 6;
             this.MaTo.Name = "MaTo";
@@ -261,6 +266,7 @@
             this.cbonam.Name = "cbonam";
             this.cbonam.Size = new System.Drawing.Size(85, 24);
             this.cbonam.TabIndex = 2;
+            this.cbonam.SelectedIndexChanged += new System.EventHandler(this.cbonam_SelectedIndexChanged);
             // 
             // cbothang
             // 
@@ -274,6 +280,7 @@
             this.cbothang.Name = "cbothang";
             this.cbothang.Size = new System.Drawing.Size(60, 24);
             this.cbothang.TabIndex = 1;
+            this.cbothang.SelectedIndexChanged += new System.EventHandler(this.cbothang_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -379,6 +386,7 @@
             this.cboPhong.Name = "cboPhong";
             this.cboPhong.Size = new System.Drawing.Size(223, 24);
             this.cboPhong.TabIndex = 3;
+            this.cboPhong.SelectedIndexChanged += new System.EventHandler(this.cboPhong_SelectedIndexChanged);
             // 
             // dgv_TiLeLuong
             // 
@@ -402,6 +410,7 @@
             this.dgv_TiLeLuong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_TiLeLuong.Size = new System.Drawing.Size(600, 197);
             this.dgv_TiLeLuong.TabIndex = 1;
+            this.dgv_TiLeLuong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TiLeLuong_CellClick);
             // 
             // pnlthongtin
             // 
@@ -437,6 +446,7 @@
             this.Name = "frmBangTiLeLuong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bảng Tỉ Lệ Lương Tháng";
+            this.Load += new System.EventHandler(this.frmBangTiLeLuong_Load);
             this.grpbox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_TiLeLuong)).EndInit();
             this.pnlthongtin.ResumeLayout(false);
@@ -447,12 +457,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button cmdluu;
-        private System.Windows.Forms.Button cmdthoat;
-        private System.Windows.Forms.Button cmdthem;
-        private System.Windows.Forms.Button cmdxoa;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.GroupBox grpbox;
-        private System.Windows.Forms.Button cmdCapnhat;
+        private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.DataGridViewTextBoxColumn maphong;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTo;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="TieuDe">
+        <CanGrow>true</CanGrow>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>PHIẾU LƯƠNG NHÂN VIÊN</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>16pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style><TextAlign>Center</TextAlign></Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>0.2cm</Top>
+        <Left>0cm</Left>
+        <Height>1cm</Height>
+        <Width>18cm</Width>
+        <Style><Border><Style>None</Style></Border></Style>
+      </Textbox>
+      <Tablix Name="Tablix1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn><Width>5cm</Width></TablixColumn>
+            <TablixColumn><Width>7cm</Width></TablixColumn>
+            <TablixColumn><Width>3cm</Width></TablixColumn>
+            <TablixColumn><Width>3cm</Width></TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.7cm</Height>
+              <TablixCells>
+                <TablixCell><CellContents><Textbox Name="L1"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>Mã nhân viên:</Value><Style><FontWeight>Bold</FontWeight><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>None</Style></Border><PaddingLeft>2pt</PaddingLeft><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="V1"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Fields!MaNV.Value</Value><Style><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>None</Style></Border><PaddingLeft>2pt</PaddingLeft><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="L2"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>Tháng/Năm:</Value><Style><FontWeight>Bold</FontWeight><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>None</Style></Border><PaddingLeft>2pt</PaddingLeft><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="V2"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Fields!Thang.Value &amp; "/" &amp; Fields!Nam.Value</Value><Style><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>None</Style></Border><PaddingLeft>2pt</PaddingLeft><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.7cm</Height>
+              <TablixCells>
+                <TablixCell><CellContents><Textbox Name="L3"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>Họ và tên:</Value><Style><FontWeight>Bold</FontWeight><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>None</Style></Border><PaddingLeft>2pt</PaddingLeft><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="V3"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Fields!HoTen.Value</Value><Style><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>None</Style></Border><PaddingLeft>2pt</PaddingLeft><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="L4"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>Phòng ban:</Value><Style><FontWeight>Bold</FontWeight><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>None</Style></Border><PaddingLeft>2pt</PaddingLeft><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="V4"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Fields!TenPB.Value</Value><Style><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>None</Style></Border><PaddingLeft>2pt</PaddingLeft><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.7cm</Height>
+              <TablixCells>
+                <TablixCell><CellContents><Textbox Name="L5"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>Chức vụ:</Value><Style><FontWeight>Bold</FontWeight><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>None</Style></Border><PaddingLeft>2pt</PaddingLeft><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="V5"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Fields!TenCV.Value</Value><Style><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>None</Style></Border><PaddingLeft>2pt</PaddingLeft><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="E1"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value></Value></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>None</Style></Border></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="E2"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value></Value></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>None</Style></Border></Style></Textbox></CellContents></TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.7cm</Height>
+              <TablixCells>
+                <TablixCell><CellContents><Textbox Name="L6"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>Lương cơ bản:</Value><Style><FontWeight>Bold</FontWeight><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>LightGrey</Color></Border><BackgroundColor>#EBF3FB</BackgroundColor><PaddingLeft>4pt</PaddingLeft><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="V6"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Format(CDec(Fields!LuongCoBan.Value),"#,##0") &amp; " đ"</Value><Style><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>LightGrey</Color></Border><BackgroundColor>#EBF3FB</BackgroundColor><PaddingRight>4pt</PaddingRight><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="L7"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>Ngày công:</Value><Style><FontWeight>Bold</FontWeight><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>LightGrey</Color></Border><BackgroundColor>#EBF3FB</BackgroundColor><PaddingLeft>4pt</PaddingLeft><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="V7"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Fields!NgayCong.Value</Value><Style><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns><Style><TextAlign>Center</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>LightGrey</Color></Border><BackgroundColor>#EBF3FB</BackgroundColor><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.7cm</Height>
+              <TablixCells>
+                <TablixCell><CellContents><Textbox Name="L8"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>Lương ngày công:</Value><Style><FontWeight>Bold</FontWeight><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>LightGrey</Color></Border><PaddingLeft>4pt</PaddingLeft><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="V8"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Format(CDec(Fields!LuongNgayCong.Value),"#,##0") &amp; " đ"</Value><Style><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>LightGrey</Color></Border><PaddingRight>4pt</PaddingRight><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="L9"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>Lương tăng ca:</Value><Style><FontWeight>Bold</FontWeight><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>LightGrey</Color></Border><PaddingLeft>4pt</PaddingLeft><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="V9"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Format(CDec(Fields!LuongTangCa.Value),"#,##0") &amp; " đ"</Value><Style><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>LightGrey</Color></Border><PaddingRight>4pt</PaddingRight><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.7cm</Height>
+              <TablixCells>
+                <TablixCell><CellContents><Textbox Name="L10"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>Phụ cấp CV:</Value><Style><FontWeight>Bold</FontWeight><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>LightGrey</Color></Border><BackgroundColor>#EBF3FB</BackgroundColor><PaddingLeft>4pt</PaddingLeft><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="V10"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Format(CDec(Fields!PhuCap.Value),"#,##0") &amp; " đ"</Value><Style><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>LightGrey</Color></Border><BackgroundColor>#EBF3FB</BackgroundColor><PaddingRight>4pt</PaddingRight><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="L11"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>Phụ cấp khác:</Value><Style><FontWeight>Bold</FontWeight><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>LightGrey</Color></Border><BackgroundColor>#EBF3FB</BackgroundColor><PaddingLeft>4pt</PaddingLeft><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="V11"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Format(CDec(Fields!PhuCapKhac.Value),"#,##0") &amp; " đ"</Value><Style><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>LightGrey</Color></Border><BackgroundColor>#EBF3FB</BackgroundColor><PaddingRight>4pt</PaddingRight><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.7cm</Height>
+              <TablixCells>
+                <TablixCell><CellContents><Textbox Name="L12"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>Trích BHXH+BHYT:</Value><Style><FontWeight>Bold</FontWeight><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize><Color>Red</Color></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>LightGrey</Color></Border><PaddingLeft>4pt</PaddingLeft><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="V12"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>="- " &amp; Format(CDec(Fields!BHXHvaBHYT.Value),"#,##0") &amp; " đ"</Value><Style><FontFamily>Times New Roman</FontFamily><FontSize>11pt</FontSize><Color>Red</Color></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>LightGrey</Color></Border><PaddingRight>4pt</PaddingRight><PaddingTop>2pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="E3"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value></Value></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>None</Style></Border></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="E4"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value></Value></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>None</Style></Border></Style></Textbox></CellContents></TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.9cm</Height>
+              <TablixCells>
+                <TablixCell><CellContents><Textbox Name="L13"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>THỰC LÃNH:</Value><Style><FontWeight>Bold</FontWeight><FontFamily>Times New Roman</FontFamily><FontSize>13pt</FontSize></Style></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>#4472C4</Color></Border><BackgroundColor>#4472C4</BackgroundColor><Color>White</Color><PaddingLeft>4pt</PaddingLeft><PaddingTop>4pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="V13"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value>=Format(CDec(Fields!ThuCLanh.Value),"#,##0") &amp; " đ"</Value><Style><FontWeight>Bold</FontWeight><FontFamily>Times New Roman</FontFamily><FontSize>13pt</FontSize></Style></TextRun></TextRuns><Style><TextAlign>Right</TextAlign></Style></Paragraph></Paragraphs><Style><Border><Style>Solid</Style><Color>#4472C4</Color></Border><BackgroundColor>#4472C4</BackgroundColor><Color>White</Color><PaddingRight>4pt</PaddingRight><PaddingTop>4pt</PaddingTop></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="E5"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value></Value></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>None</Style></Border></Style></Textbox></CellContents></TablixCell>
+                <TablixCell><CellContents><Textbox Name="E6"><CanGrow>true</CanGrow><Paragraphs><Paragraph><TextRuns><TextRun><Value></Value></TextRun></TextRuns></Paragraph></Paragraphs><Style><Border><Style>None</Style></Border></Style></Textbox></CellContents></TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember /><TablixMember /><TablixMember /><TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Details" />
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsPhieuLuong</DataSetName>
+        <Top>1.5cm</Top>
+        <Left>0cm</Left>
+        <Height>7cm</Height>
+        <Width>18cm</Width>
+        <Style><Border><Style>None</Style></Border></Style>
+      </Tablix>
+    </ReportItems>
+    <Height>25cm</Height>
+    <Style />
+  </Body>
+  <Width>21cm</Width>
+  <Page>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>1.5cm</LeftMargin>
+    <RightMargin>1.5cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <Style />
+  </Page>
+  <DataSources>
+	<DataSource Name="dsPhieuLuong">
+		<ConnectionProperties>
+			<DataProvider>System.Data.DataSet</DataProvider>
+			<ConnectString>/* Local Connection */</ConnectString>
+		</ConnectionProperties>
+	</DataSource>
+</DataSources>
+<DataSets>
+    <DataSet Name="dsPhieuLuong">
+      <Fields>
+        <Field Name="MaNV"><DataField>MaNV</DataField></Field>
+        <Field Name="HoTen"><DataField>HoTen</DataField></Field>
+        <Field Name="TenPB"><DataField>TenPB</DataField></Field>
+        <Field Name="TenCV"><DataField>TenCV</DataField></Field>
+        <Field Name="LuongCoBan"><DataField>LuongCoBan</DataField></Field>
+        <Field Name="NgayCong"><DataField>NgayCong</DataField></Field>
+        <Field Name="LuongNgayCong"><DataField>LuongNgayCong</DataField></Field>
+        <Field Name="LuongTangCa"><DataField>LuongTangCa</DataField></Field>
+        <Field Name="PhuCap"><DataField>PhuCap</DataField></Field>
+        <Field Name="PhuCapKhac"><DataField>PhuCapKhac</DataField></Field>
+        <Field Name="BHXHvaBHYT"><DataField>BHXHvaBHYT</DataField></Field>
+        <Field Name="ThuCLanh"><DataField>ThuCLanh</DataField></Field>
+        <Field Name="Thang"><DataField>Thang</DataField></Field>
+        <Field Name="Nam"><DataField>Nam</DataField></Field>
+      </Fields>
+      <Query><DataSourceName>dsPhieuLuong</DataSourceName><CommandText /></Query>
+    </DataSet>
+  </DataSets>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+</Report>
