@@ -1,0 +1,19 @@
+1. CÀI SQL SERVER EXPRESS (nếu chưa có)
+   https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+
+2. RESTORE DATABASE
+   - Mở SSMS → chuột phải Databases → Restore Database...
+   - Chọn Device → Add → chọn file QLNhanSu.bak → OK
+   - Nhấn OK để restore
+
+3. CHẠY ỨNG DỤNG
+   - Mở file QLNhanSu.sln bằng Visual Studio
+   - Mở App.config, sửa connection string cho đúng máy thầy:
+       Data Source=.\SQLEXPRESS  (giữ nguyên nếu dùng SQL Express)
+       User ID=sa
+       Password=<mật khẩu sa của máy>
+   - Build (Ctrl+Shift+B) → F5
+
+4. TÀI KHOẢN ĐĂNG NHẬP
+   - Admin   : admin    / admin123
+   - Nhân viên: lan     / 123456
