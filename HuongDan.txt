@@ -8,7 +8,7 @@
 
 3. CHẠY ỨNG DỤNG
    - Mở file QLNhanSu.sln bằng Visual Studio
-   - Mở App.config, sửa connection string cho đúng máy thầy:
+   - Mở App.config, sửa connection string cho đúng máy:
        Data Source=.\SQLEXPRESS  (giữ nguyên nếu dùng SQL Express)
        User ID=sa
        Password=<mật khẩu sa của máy>
